@@ -1,21 +1,37 @@
-define('app',['exports'], function (exports) {
-  'use strict';
+define('app',['exports', './services/contactService'], function (exports, _contactService) {
+    'use strict';
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.App = undefined;
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
     }
-  }
 
-  var App = exports.App = function App() {
-    _classCallCheck(this, App);
+    var App = exports.App = function () {
+        App.inject = function inject() {
+            return [_contactService.ContactService];
+        };
 
-    this.message = 'Hello World!';
-  };
+        function App(contactService) {
+            var _this = this;
+
+            _classCallCheck(this, App);
+
+            this.message = 'Hello World!';
+            contactService.GetAll().then(function (result) {
+                _this.message = 'Contact Results: \n                                ' + result.map(function (contact) {
+                    return contact.name;
+                });
+            });
+        }
+
+        return App;
+    }();
 });
 define('environment',["exports"], function (exports) {
   "use strict";
@@ -66,6 +82,46 @@ define('main',['exports', './environment'], function (exports, _environment) {
     });
   }
 });
+define('services/contactService',['exports', 'aurelia-fetch-client'], function (exports, _aureliaFetchClient) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.ContactService = undefined;
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
+
+    var ContactService = exports.ContactService = function () {
+        ContactService.inject = function inject() {
+            return [_aureliaFetchClient.HttpClient];
+        };
+
+        function ContactService(http) {
+            _classCallCheck(this, ContactService);
+
+            this.http = http;
+
+            this.http.configure(function (config) {
+                config.useStandardConfiguration().withBaseUrl('http://localhost:13322/api/contactsApi/');
+            });
+        }
+
+        ContactService.prototype.GetAll = function GetAll() {
+            return this.http.fetch('').then(function (response) {
+                return response.json();
+            }).catch(function (error) {
+                return console.log(error);
+            });
+        };
+
+        return ContactService;
+    }();
+});
 define('resources/index',["exports"], function (exports) {
   "use strict";
 
@@ -75,5 +131,5 @@ define('resources/index',["exports"], function (exports) {
   exports.configure = configure;
   function configure(config) {}
 });
-define('text!app.html', ['module'], function(module) { module.exports = "<template>\n  <h1>${message}</h1>\n</template>\n"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template>\r\n  <h1>${message}</h1>\r\n</template>\r\n"; });
 //# sourceMappingURL=app-bundle.js.map
