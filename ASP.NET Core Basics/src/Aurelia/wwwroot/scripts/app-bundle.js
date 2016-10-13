@@ -1,37 +1,19 @@
-define('app',['exports', './services/contactService'], function (exports, _contactService) {
-    'use strict';
+define('app',["exports"], function (exports) {
+  "use strict";
 
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.App = undefined;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
 
-    function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-            throw new TypeError("Cannot call a class as a function");
-        }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
     }
+  }
 
-    var App = exports.App = function () {
-        App.inject = function inject() {
-            return [_contactService.ContactService];
-        };
-
-        function App(contactService) {
-            var _this = this;
-
-            _classCallCheck(this, App);
-
-            this.message = 'Hello World!';
-            contactService.GetAll().then(function (result) {
-                _this.message = 'Contact Results: \n                                ' + result.map(function (contact) {
-                    return contact.name;
-                });
-            });
-        }
-
-        return App;
-    }();
+  var App = exports.App = function App() {
+    _classCallCheck(this, App);
+  };
 });
 define('environment',["exports"], function (exports) {
   "use strict";
@@ -82,7 +64,44 @@ define('main',['exports', './environment'], function (exports, _environment) {
     });
   }
 });
-define('services/contactService',['exports', 'aurelia-fetch-client'], function (exports, _aureliaFetchClient) {
+define('contacts/contact-list',['exports', './contact-service'], function (exports, _contactService) {
+    'use strict';
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.ContactList = undefined;
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
+
+    var ContactList = exports.ContactList = function () {
+        ContactList.inject = function inject() {
+            return [_contactService.ContactService];
+        };
+
+        function ContactList(contactService) {
+            _classCallCheck(this, ContactList);
+
+            this.contactService = contactService;
+            this.contacts = [];
+        }
+
+        ContactList.prototype.created = function created() {
+            var _this = this;
+
+            this.contactService.GetAll().then(function (contacts) {
+                return _this.contacts = contacts;
+            });
+        };
+
+        return ContactList;
+    }();
+});
+define('contacts/contact-service',['exports', 'aurelia-fetch-client', './contact'], function (exports, _aureliaFetchClient, _contact) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -114,12 +133,43 @@ define('services/contactService',['exports', 'aurelia-fetch-client'], function (
         ContactService.prototype.GetAll = function GetAll() {
             return this.http.fetch('').then(function (response) {
                 return response.json();
+            }).then(function (contacts) {
+                return Array.from(contacts, function (c) {
+                    return new _contact.Contact(c);
+                });
             }).catch(function (error) {
                 return console.log(error);
             });
         };
 
         return ContactService;
+    }();
+});
+define('contacts/contact',["exports"], function (exports) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
+
+    var Contact = exports.Contact = function () {
+        function Contact(data) {
+            _classCallCheck(this, Contact);
+
+            Object.assign(this, data);
+        }
+
+        Contact.prototype.getAddress = function getAddress() {
+            return this.address + " " + this.city + ", " + this.state + " " + this.postalCode;
+        };
+
+        return Contact;
     }();
 });
 define('resources/index',["exports"], function (exports) {
@@ -131,5 +181,6 @@ define('resources/index',["exports"], function (exports) {
   exports.configure = configure;
   function configure(config) {}
 });
-define('text!app.html', ['module'], function(module) { module.exports = "<template>\r\n  <h1>${message}</h1>\r\n</template>\r\n"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template>\r\n    <require from=\"./contacts/contact-list\"></require>\r\n    <h1>App</h1>\r\n    <contact-list></contact-list>\r\n</template>\r\n"; });
+define('text!contacts/contact-list.html', ['module'], function(module) { module.exports = "<template>\r\n    <ul>\r\n        <li repeat.for=\"contact of contacts\">\r\n            <h4>${contact.name}</h4>\r\n            <p>${contact.getAddress()}</p>\r\n        </li>\r\n    </ul>\r\n</template>"; });
 //# sourceMappingURL=app-bundle.js.map

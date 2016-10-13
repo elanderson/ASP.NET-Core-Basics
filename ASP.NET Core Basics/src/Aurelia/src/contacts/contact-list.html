@@ -1,0 +1,8 @@
+﻿<template>
+    <ul>
+        <li repeat.for="contact of contacts">
+            <h4>${contact.name}</h4>
+            <p>${contact.getAddress()}</p>
+        </li>
+    </ul>
+</template>

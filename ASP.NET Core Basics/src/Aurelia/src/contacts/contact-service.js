@@ -1,4 +1,5 @@
 ﻿import { HttpClient } from 'aurelia-fetch-client';
+import { Contact } from './contact';
 
 export class ContactService {
     static inject() { return [HttpClient] };
@@ -16,6 +17,7 @@ export class ContactService {
     GetAll() {
        return this.http.fetch('')
             .then(response => response.json())
+            .then(contacts => Array.from(contacts, c => new Contact(c)))
             .catch(error => console.log(error));
     }
 }
