@@ -52,7 +52,7 @@
         "id": "aspnetcore",
         "displayName": "ASP.NET Core",
         "output": "wwwroot\\scripts",
-        "baseUrl": "scripts"
+        "baseUrl": "../scripts"
       }
     ],
     "loader": {
