@@ -27,6 +27,11 @@ namespace Aurelia.Controllers
             return View();
         }
 
+        public IActionResult Aurelia()
+        {
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View();
