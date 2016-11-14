@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b6fef0fde9c5edb49932"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4fc727409276b385c580"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -775,7 +775,7 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A23534%2F__webpack_hmr", __webpack_require__(4)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A7955%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
@@ -1905,7 +1905,7 @@
 	var core_1 = __webpack_require__(19);
 	var angular2_universal_1 = __webpack_require__(20);
 	var app_module_1 = __webpack_require__(21);
-	__webpack_require__(39);
+	__webpack_require__(47);
 	// Enable either Hot Module Reloading or production mode
 	if (module['hot']) {
 	    module['hot'].accept();
@@ -1965,7 +1965,8 @@
 	var navmenu_component_1 = __webpack_require__(28);
 	var home_component_1 = __webpack_require__(32);
 	var fetchdata_component_1 = __webpack_require__(34);
-	var counter_component_1 = __webpack_require__(37);
+	var contactlist_component_1 = __webpack_require__(37);
+	var counter_component_1 = __webpack_require__(45);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -1977,6 +1978,7 @@
 	                navmenu_component_1.NavMenuComponent,
 	                counter_component_1.CounterComponent,
 	                fetchdata_component_1.FetchDataComponent,
+	                contactlist_component_1.ContactListComponent,
 	                home_component_1.HomeComponent
 	            ],
 	            imports: [
@@ -1986,6 +1988,7 @@
 	                    { path: 'home', component: home_component_1.HomeComponent },
 	                    { path: 'counter', component: counter_component_1.CounterComponent },
 	                    { path: 'fetch-data', component: fetchdata_component_1.FetchDataComponent },
+	                    { path: 'contact-list', component: contactlist_component_1.ContactListComponent },
 	                    { path: '**', redirectTo: 'home' }
 	                ])
 	            ]
@@ -2159,7 +2162,7 @@
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Angular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/counter']\">\n                        <span class='glyphicon glyphicon-education'></span> Counter\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-data']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Fetch data\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n"
+	module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Angular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/counter']\">\n                        <span class='glyphicon glyphicon-education'></span> Counter\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-data']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Fetch data\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/contact-list']\">\r\n                        <span class='glyphicon glyphicon-list-alt'></span> Contact List\r\n                    </a>\r\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 30 */
@@ -2287,6 +2290,160 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(19);
+	var contact_service_1 = __webpack_require__(38);
+	var ContactListComponent = (function () {
+	    function ContactListComponent(contactService) {
+	        this.contactService = contactService;
+	    }
+	    ContactListComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.contactService.getAll()
+	            .then(function (contacts) { return _this.contacts = contacts; });
+	    };
+	    ContactListComponent = __decorate([
+	        core_1.Component({
+	            selector: 'contactlist',
+	            template: __webpack_require__(44),
+	            providers: [contact_service_1.ContactService]
+	        }), 
+	        __metadata('design:paramtypes', [contact_service_1.ContactService])
+	    ], ContactListComponent);
+	    return ContactListComponent;
+	}());
+	exports.ContactListComponent = ContactListComponent;
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(19);
+	var http_1 = __webpack_require__(35);
+	__webpack_require__(39);
+	var contact_1 = __webpack_require__(43);
+	var ContactService = (function () {
+	    function ContactService(http) {
+	        this.http = http;
+	    }
+	    ContactService.prototype.getAll = function () {
+	        return this.http.get('http://localhost:13322/api/contactsApi/')
+	            .toPromise()
+	            .then(function (response) { return response.json(); })
+	            .then(function (contacts) { return Array.from(contacts, function (c) { return new contact_1.Contact(c); }); })
+	            .catch(function (error) { return console.log(error); });
+	    };
+	    ContactService = __decorate([
+	        core_1.Injectable(), 
+	        __metadata('design:paramtypes', [http_1.Http])
+	    ], ContactService);
+	    return ContactService;
+	}());
+	exports.ContactService = ContactService;
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var Observable_1 = __webpack_require__(40);
+	var toPromise_1 = __webpack_require__(41);
+	Observable_1.Observable.prototype.toPromise = toPromise_1.toPromise;
+	//# sourceMappingURL=toPromise.js.map
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = (__webpack_require__(2))(3);
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var root_1 = __webpack_require__(42);
+	/**
+	 * @param PromiseCtor
+	 * @return {Promise<T>}
+	 * @method toPromise
+	 * @owner Observable
+	 */
+	function toPromise(PromiseCtor) {
+	    var _this = this;
+	    if (!PromiseCtor) {
+	        if (root_1.root.Rx && root_1.root.Rx.config && root_1.root.Rx.config.Promise) {
+	            PromiseCtor = root_1.root.Rx.config.Promise;
+	        }
+	        else if (root_1.root.Promise) {
+	            PromiseCtor = root_1.root.Promise;
+	        }
+	    }
+	    if (!PromiseCtor) {
+	        throw new Error('no Promise impl found');
+	    }
+	    return new PromiseCtor(function (resolve, reject) {
+	        var value;
+	        _this.subscribe(function (x) { return value = x; }, function (err) { return reject(err); }, function () { return resolve(value); });
+	    });
+	}
+	exports.toPromise = toPromise;
+	//# sourceMappingURL=toPromise.js.map
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = (__webpack_require__(2))(8);
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	"use strict";
+	var Contact = (function () {
+	    function Contact(data) {
+	        Object.assign(this, data);
+	    }
+	    Contact.prototype.getAddress = function () {
+	        return this.address + " " + this.city + ", " + this.state + " " + this.postalCode;
+	    };
+	    return Contact;
+	}());
+	exports.Contact = Contact;
+
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	module.exports = "<ul>\r\n    <li *ngFor=\"let contact of contacts\">\r\n        <h4>{{contact.name}}</h4>\r\n        <p>{{contact.getAddress()}}</p>\r\n    </li>\r\n</ul>"
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(19);
 	var CounterComponent = (function () {
 	    function CounterComponent() {
 	        this.currentCount = 0;
@@ -2297,7 +2454,7 @@
 	    CounterComponent = __decorate([
 	        core_1.Component({
 	            selector: 'counter',
-	            template: __webpack_require__(38)
+	            template: __webpack_require__(46)
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], CounterComponent);
@@ -2307,13 +2464,13 @@
 
 
 /***/ },
-/* 38 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<h2>Counter</h2>\n\n<p>This is a simple example of an Angular 2 component.</p>\n\n<p>Current count: <strong>{{ currentCount }}</strong></p>\n\n<button (click)=\"incrementCounter()\">Increment</button>\n"
 
 /***/ },
-/* 39 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = (__webpack_require__(2))(66);
