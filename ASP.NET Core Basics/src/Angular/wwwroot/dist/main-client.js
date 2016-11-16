@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4fc727409276b385c580"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "87d547f47205e24020dd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -590,13 +590,13 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(85);
+	module.exports = (__webpack_require__(2))(86);
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = vendor_628ab9796afe14ff0efe;
+	module.exports = vendor_00f4052f196622c3cb79;
 
 /***/ },
 /* 3 */
@@ -775,13 +775,13 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A7955%2F__webpack_hmr", __webpack_require__(4)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A38421%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(145);
+	module.exports = (__webpack_require__(2))(147);
 
 /***/ },
 /* 5 */
@@ -1930,7 +1930,7 @@
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(59);
+	module.exports = (__webpack_require__(2))(60);
 
 /***/ },
 /* 19 */
@@ -1942,7 +1942,7 @@
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(62);
+	module.exports = (__webpack_require__(2))(63);
 
 /***/ },
 /* 21 */
@@ -1970,33 +1970,33 @@
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
-	    AppModule = __decorate([
-	        core_1.NgModule({
-	            bootstrap: [app_component_1.AppComponent],
-	            declarations: [
-	                app_component_1.AppComponent,
-	                navmenu_component_1.NavMenuComponent,
-	                counter_component_1.CounterComponent,
-	                fetchdata_component_1.FetchDataComponent,
-	                contactlist_component_1.ContactListComponent,
-	                home_component_1.HomeComponent
-	            ],
-	            imports: [
-	                angular2_universal_1.UniversalModule,
-	                router_1.RouterModule.forRoot([
-	                    { path: '', redirectTo: 'home', pathMatch: 'full' },
-	                    { path: 'home', component: home_component_1.HomeComponent },
-	                    { path: 'counter', component: counter_component_1.CounterComponent },
-	                    { path: 'fetch-data', component: fetchdata_component_1.FetchDataComponent },
-	                    { path: 'contact-list', component: contactlist_component_1.ContactListComponent },
-	                    { path: '**', redirectTo: 'home' }
-	                ])
-	            ]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], AppModule);
 	    return AppModule;
 	}());
+	AppModule = __decorate([
+	    core_1.NgModule({
+	        bootstrap: [app_component_1.AppComponent],
+	        declarations: [
+	            app_component_1.AppComponent,
+	            navmenu_component_1.NavMenuComponent,
+	            counter_component_1.CounterComponent,
+	            fetchdata_component_1.FetchDataComponent,
+	            contactlist_component_1.ContactListComponent,
+	            home_component_1.HomeComponent
+	        ],
+	        imports: [
+	            angular2_universal_1.UniversalModule,
+	            router_1.RouterModule.forRoot([
+	                { path: '', redirectTo: 'home', pathMatch: 'full' },
+	                { path: 'home', component: home_component_1.HomeComponent },
+	                { path: 'counter', component: counter_component_1.CounterComponent },
+	                { path: 'fetch-data', component: fetchdata_component_1.FetchDataComponent },
+	                { path: 'contact-list', component: contactlist_component_1.ContactListComponent },
+	                { path: '**', redirectTo: 'home' }
+	            ])
+	        ]
+	    }),
+	    __metadata("design:paramtypes", [])
+	], AppModule);
 	exports.AppModule = AppModule;
 
 
@@ -2004,7 +2004,7 @@
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(58);
+	module.exports = (__webpack_require__(2))(59);
 
 /***/ },
 /* 23 */
@@ -2024,16 +2024,16 @@
 	var AppComponent = (function () {
 	    function AppComponent() {
 	    }
-	    AppComponent = __decorate([
-	        core_1.Component({
-	            selector: 'app',
-	            template: __webpack_require__(24),
-	            styles: [__webpack_require__(25)]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], AppComponent);
 	    return AppComponent;
 	}());
+	AppComponent = __decorate([
+	    core_1.Component({
+	        selector: 'app',
+	        template: __webpack_require__(24),
+	        styles: [__webpack_require__(25)]
+	    }),
+	    __metadata("design:paramtypes", [])
+	], AppComponent);
 	exports.AppComponent = AppComponent;
 
 
@@ -2041,7 +2041,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='container-fluid'>\n    <div class='row'>\n        <div class='col-sm-3'>\n            <nav-menu></nav-menu>\n        </div>\n        <div class='col-sm-9 body-content'>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>\n"
+	module.exports = "<div class='container-fluid'>\r\n    <div class='row'>\r\n        <div class='col-sm-3'>\r\n            <nav-menu></nav-menu>\r\n        </div>\r\n        <div class='col-sm-9 body-content'>\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 25 */
@@ -2066,7 +2066,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@media (max-width: 767px) {\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\n    .body-content {\n        padding-top: 50px;\n    }\n}\n", ""]);
+	exports.push([module.id, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n", ""]);
 	
 	// exports
 
@@ -2145,16 +2145,16 @@
 	var NavMenuComponent = (function () {
 	    function NavMenuComponent() {
 	    }
-	    NavMenuComponent = __decorate([
-	        core_1.Component({
-	            selector: 'nav-menu',
-	            template: __webpack_require__(29),
-	            styles: [__webpack_require__(30)]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], NavMenuComponent);
 	    return NavMenuComponent;
 	}());
+	NavMenuComponent = __decorate([
+	    core_1.Component({
+	        selector: 'nav-menu',
+	        template: __webpack_require__(29),
+	        styles: [__webpack_require__(30)]
+	    }),
+	    __metadata("design:paramtypes", [])
+	], NavMenuComponent);
 	exports.NavMenuComponent = NavMenuComponent;
 
 
@@ -2162,7 +2162,7 @@
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Angular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/counter']\">\n                        <span class='glyphicon glyphicon-education'></span> Counter\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-data']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Fetch data\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/contact-list']\">\r\n                        <span class='glyphicon glyphicon-list-alt'></span> Contact List\r\n                    </a>\r\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n"
+	module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Angular</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <span class='glyphicon glyphicon-home'></span> Home\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/counter']\">\r\n                        <span class='glyphicon glyphicon-education'></span> Counter\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/fetch-data']\">\r\n                        <span class='glyphicon glyphicon-th-list'></span> Fetch data\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/contact-list']\">\r\n                        <span class='glyphicon glyphicon-list-alt'></span> Contact List\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 30 */
@@ -2187,7 +2187,7 @@
 	
 	
 	// module
-	exports.push([module.id, "li .glyphicon {\n    margin-right: 10px;\n}\n\n/* Highlighting rules for nav menu items */\nli.link-active a,\nli.link-active a:hover,\nli.link-active a:focus {\n    background-color: #4189C7;\n    color: white;\n}\n\n/* Keep the nav menu independent of scrolling and on top of other items */\n.main-nav {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 1;\n}\n\n@media (min-width: 768px) {\n    /* On small screens, convert the nav menu to a vertical sidebar */\n    .main-nav {\n        height: 100%;\n        width: calc(25% - 20px);\n    }\n    .navbar {\n        border-radius: 0px;\n        border-width: 0px;\n        height: 100%;\n    }\n    .navbar-header {\n        float: none;\n    }\n    .navbar-collapse {\n        border-top: 1px solid #444;\n        padding: 0px;\n    }\n    .navbar ul {\n        float: none;\n    }\n    .navbar li {\n        float: none;\n        font-size: 15px;\n        margin: 6px;\n    }\n    .navbar li a {\n        padding: 10px 16px;\n        border-radius: 4px;\n    }\n    .navbar a {\n        /* If a menu item's text is too long, truncate it */\n        width: 100%;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n    }\n}\n", ""]);
+	exports.push([module.id, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.link-active a,\r\nli.link-active a:hover,\r\nli.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .navbar-header {\r\n        float: none;\r\n    }\r\n    .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .navbar ul {\r\n        float: none;\r\n    }\r\n    .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
 	
 	// exports
 
@@ -2210,15 +2210,15 @@
 	var HomeComponent = (function () {
 	    function HomeComponent() {
 	    }
-	    HomeComponent = __decorate([
-	        core_1.Component({
-	            selector: 'home',
-	            template: __webpack_require__(33)
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], HomeComponent);
 	    return HomeComponent;
 	}());
+	HomeComponent = __decorate([
+	    core_1.Component({
+	        selector: 'home',
+	        template: __webpack_require__(33)
+	    }),
+	    __metadata("design:paramtypes", [])
+	], HomeComponent);
 	exports.HomeComponent = HomeComponent;
 
 
@@ -2226,7 +2226,7 @@
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Hello, world!</h1>\n<p>Welcome to your new single-page application, built with:</p>\n<ul>\n    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\n    <li><a href='https://angular.io/'>Angular 2</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\n    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>\n    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\n</ul>\n<p>To help you get started, we've also set up:</p>\n<ul>\n    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\n    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular 2 app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>\n    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\n    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular 2 app will be rebuilt and a new instance injected is into the page.</li>\n    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\n</ul>\n"
+	module.exports = "<h1>Hello, world!</h1>\r\n<p>Welcome to your new single-page application, built with:</p>\r\n<ul>\r\n    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\r\n    <li><a href='https://angular.io/'>Angular 2</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\r\n    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>\r\n    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\r\n</ul>\r\n<p>To help you get started, we've also set up:</p>\r\n<ul>\r\n    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\r\n    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular 2 app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>\r\n    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\r\n    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular 2 app will be rebuilt and a new instance injected is into the page.</li>\r\n    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\r\n</ul>\r\n"
 
 /***/ },
 /* 34 */
@@ -2251,15 +2251,15 @@
 	            _this.forecasts = result.json();
 	        });
 	    }
-	    FetchDataComponent = __decorate([
-	        core_1.Component({
-	            selector: 'fetchdata',
-	            template: __webpack_require__(36)
-	        }), 
-	        __metadata('design:paramtypes', [http_1.Http])
-	    ], FetchDataComponent);
 	    return FetchDataComponent;
 	}());
+	FetchDataComponent = __decorate([
+	    core_1.Component({
+	        selector: 'fetchdata',
+	        template: __webpack_require__(36)
+	    }),
+	    __metadata("design:paramtypes", [http_1.Http])
+	], FetchDataComponent);
 	exports.FetchDataComponent = FetchDataComponent;
 
 
@@ -2273,7 +2273,7 @@
 /* 36 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Weather forecast</h1>\n\n<p>This component demonstrates fetching data from the server.</p>\n\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\n\n<table class='table' *ngIf=\"forecasts\">\n    <thead>\n        <tr>\n            <th>Date</th>\n            <th>Temp. (C)</th>\n            <th>Temp. (F)</th>\n            <th>Summary</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let forecast of forecasts\">\n            <td>{{ forecast.dateFormatted }}</td>\n            <td>{{ forecast.temperatureC }}</td>\n            <td>{{ forecast.temperatureF }}</td>\n            <td>{{ forecast.summary }}</td>\n        </tr>\n    </tbody>\n</table>\n"
+	module.exports = "<h1>Weather forecast</h1>\r\n\r\n<p>This component demonstrates fetching data from the server.</p>\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Date</th>\r\n            <th>Temp. (C)</th>\r\n            <th>Temp. (F)</th>\r\n            <th>Summary</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{ forecast.dateFormatted }}</td>\r\n            <td>{{ forecast.temperatureC }}</td>\r\n            <td>{{ forecast.temperatureF }}</td>\r\n            <td>{{ forecast.summary }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n"
 
 /***/ },
 /* 37 */
@@ -2300,16 +2300,16 @@
 	        this.contactService.getAll()
 	            .then(function (contacts) { return _this.contacts = contacts; });
 	    };
-	    ContactListComponent = __decorate([
-	        core_1.Component({
-	            selector: 'contactlist',
-	            template: __webpack_require__(44),
-	            providers: [contact_service_1.ContactService]
-	        }), 
-	        __metadata('design:paramtypes', [contact_service_1.ContactService])
-	    ], ContactListComponent);
 	    return ContactListComponent;
 	}());
+	ContactListComponent = __decorate([
+	    core_1.Component({
+	        selector: 'contactlist',
+	        template: __webpack_require__(44),
+	        providers: [contact_service_1.ContactService]
+	    }),
+	    __metadata("design:paramtypes", [contact_service_1.ContactService])
+	], ContactListComponent);
 	exports.ContactListComponent = ContactListComponent;
 
 
@@ -2342,12 +2342,12 @@
 	            .then(function (contacts) { return Array.from(contacts, function (c) { return new contact_1.Contact(c); }); })
 	            .catch(function (error) { return console.log(error); });
 	    };
-	    ContactService = __decorate([
-	        core_1.Injectable(), 
-	        __metadata('design:paramtypes', [http_1.Http])
-	    ], ContactService);
 	    return ContactService;
 	}());
+	ContactService = __decorate([
+	    core_1.Injectable(),
+	    __metadata("design:paramtypes", [http_1.Http])
+	], ContactService);
 	exports.ContactService = ContactService;
 
 
@@ -2427,7 +2427,7 @@
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul>\r\n    <li *ngFor=\"let contact of contacts\">\r\n        <h4>{{contact.name}}</h4>\r\n        <p>{{contact.getAddress()}}</p>\r\n    </li>\r\n</ul>"
+	module.exports = "<h1>Contact List</h1>\r\n\r\n<p *ngIf=\"!contacts\"><em>Loading...</em></p>\r\n\r\n<table class=\"table\" *ngIf=\"contacts\">\r\n    <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Name</th>\r\n            <th>Address</th>\r\n            <th>Phone</th>\r\n            <th>Email</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let contact of contacts\">\r\n            <td>{{contact.id}}</td>\r\n            <td>{{contact.name}}</td>\r\n            <td>{{contact.getAddress()}}</td>\r\n            <td>{{contact.phone}}</td>\r\n            <td>{{contact.email}}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
 
 /***/ },
 /* 45 */
@@ -2451,15 +2451,15 @@
 	    CounterComponent.prototype.incrementCounter = function () {
 	        this.currentCount++;
 	    };
-	    CounterComponent = __decorate([
-	        core_1.Component({
-	            selector: 'counter',
-	            template: __webpack_require__(46)
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], CounterComponent);
 	    return CounterComponent;
 	}());
+	CounterComponent = __decorate([
+	    core_1.Component({
+	        selector: 'counter',
+	        template: __webpack_require__(46)
+	    }),
+	    __metadata("design:paramtypes", [])
+	], CounterComponent);
 	exports.CounterComponent = CounterComponent;
 
 
@@ -2467,13 +2467,13 @@
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "<h2>Counter</h2>\n\n<p>This is a simple example of an Angular 2 component.</p>\n\n<p>Current count: <strong>{{ currentCount }}</strong></p>\n\n<button (click)=\"incrementCounter()\">Increment</button>\n"
+	module.exports = "<h2>Counter</h2>\r\n\r\n<p>This is a simple example of an Angular 2 component.</p>\r\n\r\n<p>Current count: <strong>{{ currentCount }}</strong></p>\r\n\r\n<button (click)=\"incrementCounter()\">Increment</button>\r\n"
 
 /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = (__webpack_require__(2))(66);
+	module.exports = (__webpack_require__(2))(67);
 
 /***/ }
 /******/ ]);

@@ -1,6 +1,24 @@
-﻿<ul>
-    <li *ngFor="let contact of contacts">
-        <h4>{{contact.name}}</h4>
-        <p>{{contact.getAddress()}}</p>
-    </li>
-</ul>
+﻿<h1>Contact List</h1>
+
+<p *ngIf="!contacts"><em>Loading...</em></p>
+
+<table class="table" *ngIf="contacts">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.id}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.getAddress()}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
+        </tr>
+    </tbody>
+</table>

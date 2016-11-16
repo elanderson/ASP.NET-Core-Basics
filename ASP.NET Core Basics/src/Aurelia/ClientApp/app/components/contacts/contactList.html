@@ -1,8 +1,26 @@
-﻿<template>
-    <ul>
-        <li repeat.for="contact of contacts">
-            <h4>${contact.name}</h4>
-            <p>${contact.getAddress()}</p>
-        </li>
-    </ul>
+﻿<template>  
+    <h1>Contact List</h1>
+
+    <p if.bind="!contacts"><em>Loading...</em></p>
+
+    <table class="table" if.bind="contacts">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="contact of contacts">
+                <td>${contact.id}</td>
+                <td>${contact.name}</td>
+                <td>${contact.getAddress()}</td>
+                <td>${contact.phone}</td>
+                <td>${contact.email}</td>
+            </tr>
+        </tbody>
+    </table>
 </template>
