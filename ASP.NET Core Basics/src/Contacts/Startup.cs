@@ -55,6 +55,8 @@ namespace Contacts
 
             services.AddDbContext<ContactsContext>(options =>
                     options.UseSqlServer(Configuration["Data:ContactsContext:ConnectionString"]));
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,6 +96,9 @@ namespace Contacts
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUi();
         }
     }
 }
