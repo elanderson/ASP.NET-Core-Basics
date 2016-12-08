@@ -5,7 +5,7 @@ import { ContactService } from './contactService';
 @inject(ContactService)
 export class ContactList {
     contacts: Contact[];
-    selectedContact: Contact = null;
+    selectedContactId: number = null;
 
     constructor(private contactService: ContactService) {}
 
@@ -15,6 +15,6 @@ export class ContactList {
     }
 
     select(contact) {
-        this.selectedContact = contact;
+        this.selectedContactId = contact.id;
     }
 }

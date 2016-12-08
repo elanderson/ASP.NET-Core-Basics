@@ -35,6 +35,13 @@ export class App {
             moduleId: '../contacts/contactList',
             nav: true,
             title: 'Contact List'
+        },
+        {
+            route: 'contact-detail/:id',
+            name: 'contactdetail',
+            moduleId: '../contacts/contactDetail',
+            nav: false,
+            title: 'Contact Detail'
         }]);
 
         this.router = router;

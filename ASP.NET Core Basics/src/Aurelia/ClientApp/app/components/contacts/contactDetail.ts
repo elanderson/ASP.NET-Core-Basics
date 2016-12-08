@@ -1,5 +1,16 @@
-﻿import { bindable } from 'aurelia-framework';
+﻿import { inject } from 'aurelia-framework';
+import { Contact } from './contact';
+import { ContactService } from './contactService';
 
+@inject(ContactService)
 export class ContactDetail {
-    @bindable contact = null;
+     contact: Contact;
+
+    constructor(private contactService: ContactService) { }
+
+    activate(parms, routeConfig) {
+        return this.contactService.getById(parms.id)
+            .then(contact => this.contact = contact);
+    }
+
 }
