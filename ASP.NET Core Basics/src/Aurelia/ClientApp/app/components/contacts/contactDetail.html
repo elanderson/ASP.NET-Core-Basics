@@ -1,0 +1,18 @@
+﻿<template bindable="contact">
+    <div if.bind="contact">
+        <h2>${contact.Name}</h2>
+        <div><label>ID: </label>${contact.Id}</div>
+        <div>
+            <label>Name: </label>
+            <div><input value.bind="contact.Name" placeholder="name"></div>
+        </div>
+        <div>
+            <label>Email: </label>
+            <div><input value.bind="contact.EmailAddress" placeholder="email"></div>
+        </div>
+        <div>
+            <label>Phone: </label>
+            <div><input value.bind="contact.PhoneNumber" placeholder="phone"></div>
+        </div>
+    </div>
+</template>

@@ -5,11 +5,16 @@ import { ContactService } from './contactService';
 @inject(ContactService)
 export class ContactList {
     contacts: Contact[];
+    selectedContact: Contact = null;
 
     constructor(private contactService: ContactService) {}
 
     created() {
         this.contactService.getAll()
             .then(contacts => this.contacts = contacts);
+    }
+
+    select(contact) {
+        this.selectedContact = contact;
     }
 }

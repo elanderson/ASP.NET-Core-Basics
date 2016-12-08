@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d13e0c3c97adbd1b8f4e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ad74300061a00e918e98"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -775,7 +775,7 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A48489%2F__webpack_hmr", __webpack_require__(4)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A49245%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
