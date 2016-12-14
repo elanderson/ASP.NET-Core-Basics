@@ -11,10 +11,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr repeat.for="contact of contacts" class="${contact.id === selectedContactId ? 'active' : ''"}
-                route-href="route: contacts; params.bind: {id:contact.id}" click.delegate="select(contact)">
-                    <td>${contact.id}</td>
-                    <td>${contact.name}</td>
+            <tr repeat.for="contact of contacts" class="${contact.id === selectedContactId ? 'active' : ''" }>
+                <td><a route-href="route: contactdetail; params.bind: {id:contact.id}" click.delegate="select($contact)">${contact.id}</a></td>
+                <td>${contact.name}</td>
             </tr>
         </tbody>
     </table>
