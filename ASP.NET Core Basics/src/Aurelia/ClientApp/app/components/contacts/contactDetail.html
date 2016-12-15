@@ -1,9 +1,20 @@
 ﻿<template>
+    <h1>Contact Details</h1>
+    <hr />
     <div if.bind="contact">
-        <div>ID: ${contact.id}</div>
-        <div>Name: ${contact.name}</div>
-        <div>Address: ${contact.getAddress()}</div>
-        <div>Phone: ${contact.phone}</div>
-        <div>Email: ${contact.email}</div>
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>${contact.id}</dd>
+            <dt>Name</dt>
+            <dd>${contact.name}</dd>
+            <dt>Address</dt>
+            <dd>${contact.getAddress()}</dd>
+            <dt>Phone</dt>
+            <dd>${contact.phone}</dd>
+            <dt>Email</dt>
+            <dd>${contact.email}</dd>
+        </dl>
     </div>
+    <a route-href="route: contactlist">Back to List</a>
+    <hr />
 </template>

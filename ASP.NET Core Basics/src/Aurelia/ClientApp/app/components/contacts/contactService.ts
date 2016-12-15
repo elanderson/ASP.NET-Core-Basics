@@ -20,7 +20,7 @@ export class ContactService {
     }
 
     getById(id: string): Promise<Contact> {
-        return this.http.fetch('id')
+        return this.http.fetch(id)
             .then(response => response.json())
             .then(contact => new Contact(contact))
             .catch(error => console.log(error));
