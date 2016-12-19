@@ -19,4 +19,11 @@ export class ContactService {
             .catch(error => console.log(error));
     }
 
+    getById(id: string): Promise<Contact> {
+        return this.http.fetch(id)
+            .then(response => response.json())
+            .then(contact => new Contact(contact))
+            .catch(error => console.log(error));
+    }
+
 }
