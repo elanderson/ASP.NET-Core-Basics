@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "888a0b907f83dbe0c472"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9dfac85803634b569273"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -775,7 +775,7 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A5497%2F__webpack_hmr", __webpack_require__(4)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A13016%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
@@ -1905,7 +1905,7 @@
 	var core_1 = __webpack_require__(19);
 	var angular2_universal_1 = __webpack_require__(20);
 	var app_module_1 = __webpack_require__(21);
-	__webpack_require__(47);
+	__webpack_require__(53);
 	// Enable either Hot Module Reloading or production mode
 	if (module['hot']) {
 	    module['hot'].accept();
@@ -1966,7 +1966,8 @@
 	var home_component_1 = __webpack_require__(32);
 	var fetchdata_component_1 = __webpack_require__(34);
 	var contactlist_component_1 = __webpack_require__(37);
-	var counter_component_1 = __webpack_require__(45);
+	var contactdetail_component_1 = __webpack_require__(45);
+	var counter_component_1 = __webpack_require__(51);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -1981,6 +1982,7 @@
 	            counter_component_1.CounterComponent,
 	            fetchdata_component_1.FetchDataComponent,
 	            contactlist_component_1.ContactListComponent,
+	            contactdetail_component_1.ContactDetailComponent,
 	            home_component_1.HomeComponent
 	        ],
 	        imports: [
@@ -1991,6 +1993,7 @@
 	                { path: 'counter', component: counter_component_1.CounterComponent },
 	                { path: 'fetch-data', component: fetchdata_component_1.FetchDataComponent },
 	                { path: 'contact-list', component: contactlist_component_1.ContactListComponent },
+	                { path: 'contact-detail/:id', component: contactdetail_component_1.ContactDetailComponent },
 	                { path: '**', redirectTo: 'home' }
 	            ])
 	        ]
@@ -2294,11 +2297,15 @@
 	var ContactListComponent = (function () {
 	    function ContactListComponent(contactService) {
 	        this.contactService = contactService;
+	        this.selectedContactId = null;
 	    }
 	    ContactListComponent.prototype.ngOnInit = function () {
 	        var _this = this;
 	        this.contactService.getAll()
 	            .then(function (contacts) { return _this.contacts = contacts; });
+	    };
+	    ContactListComponent.prototype.onSelect = function (contact) {
+	        this.selectedContactId = contact.id;
 	    };
 	    return ContactListComponent;
 	}());
@@ -2334,12 +2341,20 @@
 	var ContactService = (function () {
 	    function ContactService(http) {
 	        this.http = http;
+	        this.baseUrl = 'http://localhost:13322/api/contactsApi/';
 	    }
 	    ContactService.prototype.getAll = function () {
-	        return this.http.get('http://localhost:13322/api/contactsApi/')
+	        return this.http.get(this.baseUrl)
 	            .toPromise()
 	            .then(function (response) { return response.json(); })
 	            .then(function (contacts) { return Array.from(contacts, function (c) { return new contact_1.Contact(c); }); })
+	            .catch(function (error) { return console.log(error); });
+	    };
+	    ContactService.prototype.getById = function (id) {
+	        return this.http.get(this.baseUrl + id)
+	            .toPromise()
+	            .then(function (response) { return response.json(); })
+	            .then(function (contact) { return new contact_1.Contact(contact); })
 	            .catch(function (error) { return console.log(error); });
 	    };
 	    return ContactService;
@@ -2427,10 +2442,227 @@
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Contact List</h1>\r\n\r\n<p *ngIf=\"!contacts\"><em>Loading...</em></p>\r\n\r\n<table class=\"table\" *ngIf=\"contacts\">\r\n    <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Name</th>\r\n            <th>Address</th>\r\n            <th>Phone</th>\r\n            <th>Email</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let contact of contacts\">\r\n            <td>{{contact.id}}</td>\r\n            <td>{{contact.name}}</td>\r\n            <td>{{contact.getAddress()}}</td>\r\n            <td>{{contact.phone}}</td>\r\n            <td>{{contact.email}}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+	module.exports = "<h1>Contact List</h1>\r\n\r\n<p *ngIf=\"!contacts\"><em>Loading...</em></p>\r\n\r\n<table class=\"table\" *ngIf=\"contacts\">\r\n    <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Name</th>\r\n            <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let contact of contacts\">\r\n            <td>{{contact.id}}</td>\r\n            <td>{{contact.name}}</td>\r\n            <td><a [routerLink]=\"['/contact-detail', contact.id]\" (click)=\"onSelect(contact)\">Details</a></td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
 
 /***/ },
 /* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(19);
+	var router_1 = __webpack_require__(22);
+	__webpack_require__(46);
+	var contact_service_1 = __webpack_require__(38);
+	var ContactDetailComponent = (function () {
+	    function ContactDetailComponent(route, router, contactService) {
+	        this.route = route;
+	        this.router = router;
+	        this.contactService = contactService;
+	    }
+	    ContactDetailComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.route.params
+	            .switchMap(function (params) { return _this.contactService.getById(params['id']); })
+	            .subscribe(function (contact) { return _this.contact = contact; });
+	    };
+	    return ContactDetailComponent;
+	}());
+	ContactDetailComponent = __decorate([
+	    core_1.Component({
+	        selector: 'contactdetail',
+	        template: __webpack_require__(50),
+	        providers: [contact_service_1.ContactService]
+	    }),
+	    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+	        router_1.Router,
+	        contact_service_1.ContactService])
+	], ContactDetailComponent);
+	exports.ContactDetailComponent = ContactDetailComponent;
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var Observable_1 = __webpack_require__(40);
+	var switchMap_1 = __webpack_require__(47);
+	Observable_1.Observable.prototype.switchMap = switchMap_1.switchMap;
+	//# sourceMappingURL=switchMap.js.map
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var OuterSubscriber_1 = __webpack_require__(48);
+	var subscribeToResult_1 = __webpack_require__(49);
+	/**
+	 * Projects each source value to an Observable which is merged in the output
+	 * Observable, emitting values only from the most recently projected Observable.
+	 *
+	 * <span class="informal">Maps each value to an Observable, then flattens all of
+	 * these inner Observables using {@link switch}.</span>
+	 *
+	 * <img src="./img/switchMap.png" width="100%">
+	 *
+	 * Returns an Observable that emits items based on applying a function that you
+	 * supply to each item emitted by the source Observable, where that function
+	 * returns an (so-called "inner") Observable. Each time it observes one of these
+	 * inner Observables, the output Observable begins emitting the items emitted by
+	 * that inner Observable. When a new inner Observable is emitted, `switchMap`
+	 * stops emitting items from the earlier-emitted inner Observable and begins
+	 * emitting items from the new one. It continues to behave like this for
+	 * subsequent inner Observables.
+	 *
+	 * @example <caption>Rerun an interval Observable on every click event</caption>
+	 * var clicks = Rx.Observable.fromEvent(document, 'click');
+	 * var result = clicks.switchMap((ev) => Rx.Observable.interval(1000));
+	 * result.subscribe(x => console.log(x));
+	 *
+	 * @see {@link concatMap}
+	 * @see {@link exhaustMap}
+	 * @see {@link mergeMap}
+	 * @see {@link switch}
+	 * @see {@link switchMapTo}
+	 *
+	 * @param {function(value: T, ?index: number): Observable} project A function
+	 * that, when applied to an item emitted by the source Observable, returns an
+	 * Observable.
+	 * @param {function(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number): any} [resultSelector]
+	 * A function to produce the value on the output Observable based on the values
+	 * and the indices of the source (outer) emission and the inner Observable
+	 * emission. The arguments passed to this function are:
+	 * - `outerValue`: the value that came from the source
+	 * - `innerValue`: the value that came from the projected Observable
+	 * - `outerIndex`: the "index" of the value that came from the source
+	 * - `innerIndex`: the "index" of the value from the projected Observable
+	 * @return {Observable} An Observable that emits the result of applying the
+	 * projection function (and the optional `resultSelector`) to each item emitted
+	 * by the source Observable and taking only the values from the most recently
+	 * projected inner Observable.
+	 * @method switchMap
+	 * @owner Observable
+	 */
+	function switchMap(project, resultSelector) {
+	    return this.lift(new SwitchMapOperator(project, resultSelector));
+	}
+	exports.switchMap = switchMap;
+	var SwitchMapOperator = (function () {
+	    function SwitchMapOperator(project, resultSelector) {
+	        this.project = project;
+	        this.resultSelector = resultSelector;
+	    }
+	    SwitchMapOperator.prototype.call = function (subscriber, source) {
+	        return source._subscribe(new SwitchMapSubscriber(subscriber, this.project, this.resultSelector));
+	    };
+	    return SwitchMapOperator;
+	}());
+	/**
+	 * We need this JSDoc comment for affecting ESDoc.
+	 * @ignore
+	 * @extends {Ignored}
+	 */
+	var SwitchMapSubscriber = (function (_super) {
+	    __extends(SwitchMapSubscriber, _super);
+	    function SwitchMapSubscriber(destination, project, resultSelector) {
+	        _super.call(this, destination);
+	        this.project = project;
+	        this.resultSelector = resultSelector;
+	        this.index = 0;
+	    }
+	    SwitchMapSubscriber.prototype._next = function (value) {
+	        var result;
+	        var index = this.index++;
+	        try {
+	            result = this.project(value, index);
+	        }
+	        catch (error) {
+	            this.destination.error(error);
+	            return;
+	        }
+	        this._innerSub(result, value, index);
+	    };
+	    SwitchMapSubscriber.prototype._innerSub = function (result, value, index) {
+	        var innerSubscription = this.innerSubscription;
+	        if (innerSubscription) {
+	            innerSubscription.unsubscribe();
+	        }
+	        this.add(this.innerSubscription = subscribeToResult_1.subscribeToResult(this, result, value, index));
+	    };
+	    SwitchMapSubscriber.prototype._complete = function () {
+	        var innerSubscription = this.innerSubscription;
+	        if (!innerSubscription || innerSubscription.closed) {
+	            _super.prototype._complete.call(this);
+	        }
+	    };
+	    SwitchMapSubscriber.prototype._unsubscribe = function () {
+	        this.innerSubscription = null;
+	    };
+	    SwitchMapSubscriber.prototype.notifyComplete = function (innerSub) {
+	        this.remove(innerSub);
+	        this.innerSubscription = null;
+	        if (this.isStopped) {
+	            _super.prototype._complete.call(this);
+	        }
+	    };
+	    SwitchMapSubscriber.prototype.notifyNext = function (outerValue, innerValue, outerIndex, innerIndex, innerSub) {
+	        if (this.resultSelector) {
+	            this._tryNotifyNext(outerValue, innerValue, outerIndex, innerIndex);
+	        }
+	        else {
+	            this.destination.next(innerValue);
+	        }
+	    };
+	    SwitchMapSubscriber.prototype._tryNotifyNext = function (outerValue, innerValue, outerIndex, innerIndex) {
+	        var result;
+	        try {
+	            result = this.resultSelector(outerValue, innerValue, outerIndex, innerIndex);
+	        }
+	        catch (err) {
+	            this.destination.error(err);
+	            return;
+	        }
+	        this.destination.next(result);
+	    };
+	    return SwitchMapSubscriber;
+	}(OuterSubscriber_1.OuterSubscriber));
+	//# sourceMappingURL=switchMap.js.map
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = (__webpack_require__(2))(22);
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = (__webpack_require__(2))(30);
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	module.exports = "<h1>Contact Details</h1>\r\n<hr />\r\n<div *ngIf=\"contact\">\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>ID</dt>\r\n        <dd>{{contact.id}}</dd>\r\n        <dt>Name</dt>\r\n        <dd>{{contact.name}}</dd>\r\n        <dt>Address</dt>\r\n        <dd>{{contact.getAddress()}}</dd>\r\n        <dt>Phone</dt>\r\n        <dd>{{contact.phone}}</dd>\r\n        <dt>Email</dt>\r\n        <dd>{{contact.email}}</dd>\r\n    </dl>\r\n</div>\r\n<a routerLink=\"/contact-list\">Back to List</a>\r\n<hr />"
+
+/***/ },
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2456,7 +2688,7 @@
 	CounterComponent = __decorate([
 	    core_1.Component({
 	        selector: 'counter',
-	        template: __webpack_require__(46)
+	        template: __webpack_require__(52)
 	    }),
 	    __metadata("design:paramtypes", [])
 	], CounterComponent);
@@ -2464,13 +2696,13 @@
 
 
 /***/ },
-/* 46 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<h2>Counter</h2>\r\n\r\n<p>This is a simple example of an Angular 2 component.</p>\r\n\r\n<p>Current count: <strong>{{ currentCount }}</strong></p>\r\n\r\n<button (click)=\"incrementCounter()\">Increment</button>\r\n"
 
 /***/ },
-/* 47 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = (__webpack_require__(2))(67);

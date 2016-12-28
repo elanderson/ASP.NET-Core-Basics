@@ -1,4 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 import { Contact } from './contact';
 import { ContactService } from './contact.service';
 
@@ -8,12 +10,15 @@ import { ContactService } from './contact.service';
     providers: [ContactService]
 })
 export class ContactDetailComponent implements OnInit {
-    contacts: Contact[];
+    contact: Contact;
 
-    constructor(private contactService: ContactService) { }
+    constructor(private route: ActivatedRoute,
+                private router: Router,
+                private contactService: ContactService) { }
 
     ngOnInit(): void {
-        this.contactService.getAll()
-            .then(contacts => this.contacts = contacts);
+        this.route.params
+            .switchMap((params: Params) => this.contactService.getById(params['id']))
+            .subscribe((contact :Contact) => this.contact = contact);
     }
 }

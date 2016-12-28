@@ -14,7 +14,7 @@
         <tr *ngFor="let contact of contacts">
             <td>{{contact.id}}</td>
             <td>{{contact.name}}</td>
-            <td><a [routerLink]="['/contactdetail', contact.id]"></a></td>
+            <td><a [routerLink]="['/contact-detail', contact.id]" (click)="onSelect(contact)">Details</a></td>
         </tr>
     </tbody>
 </table>
