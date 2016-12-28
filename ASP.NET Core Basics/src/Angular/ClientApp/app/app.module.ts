@@ -6,6 +6,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { ContactListComponent } from './components/contacts/contactlist.component';
+import { ContactDetailComponent } from './components/contacts/contactdetail.component';
 import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CounterComponent } from './components/counter/counter.component';
         CounterComponent,
         FetchDataComponent,
         ContactListComponent,
+        ContactDetailComponent,
         HomeComponent
     ],
     imports: [
@@ -26,6 +28,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'contact-list', component: ContactListComponent },
+            { path: 'contact-detail/:id', component: ContactDetailComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
