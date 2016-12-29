@@ -774,8 +774,8 @@
 	    }
 	  };
 	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A13016%2F__webpack_hmr", __webpack_require__(4)(module)))
+
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A13016%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
