@@ -7,18 +7,14 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Address</th>
-            <th>Phone</th>
-            <th>Email</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let contact of contacts">
             <td>{{contact.id}}</td>
             <td>{{contact.name}}</td>
-            <td>{{contact.getAddress()}}</td>
-            <td>{{contact.phone}}</td>
-            <td>{{contact.email}}</td>
+            <td><a [routerLink]="['/contact-detail', contact.id]" (click)="onSelect(contact)">Details</a></td>
         </tr>
     </tbody>
 </table>
