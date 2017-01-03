@@ -5,12 +5,20 @@ import { ContactService } from './contactService';
 @inject(ContactService)
 export class ContactDetail {
      contact: Contact;
+     hasContactId: boolean;
 
     constructor(private contactService: ContactService) { }
 
     activate(parms, routeConfig) {
-        return this.contactService.getById(parms.id)
-            .then(contact => this.contact = contact);
+        this.hasContactId = parms.id;
+
+        if (this.hasContactId) {
+            return this.contactService.getById(parms.id)
+                .then(contact => this.contact = contact);          
+        }
+
+        return null;
+
     }
 
 }

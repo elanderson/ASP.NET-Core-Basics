@@ -37,7 +37,7 @@ export class App {
             title: 'Contact List'
         },
         {
-            route: 'contact-detail/:id',
+            route: 'contact-detail/:id?',
             name: 'contactdetail',
             moduleId: '../contacts/contactDetail',
             nav: false,
