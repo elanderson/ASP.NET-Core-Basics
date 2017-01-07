@@ -15,6 +15,9 @@
             <dd>${contact.email}</dd>
         </dl>
     </div>
+    <h3 if.bind="!hasContactId">
+        Place holder for creating a new contact
+    </h3>
     <a route-href="route: contactlist">Back to List</a>
     <hr />
 </template>

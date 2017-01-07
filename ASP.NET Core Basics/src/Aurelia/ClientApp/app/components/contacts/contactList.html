@@ -2,6 +2,8 @@
     <h1>Contact List</h1>
 
     <p if.bind="!contacts"><em>Loading...</em></p>
+    
+    <a route-href="route: contactdetail">Create New Contact</a>
 
     <table class="table" if.bind="contacts">
         <thead>
