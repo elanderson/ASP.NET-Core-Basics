@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9dfac85803634b569273"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d88f9db07a929efb2fb5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -774,8 +774,8 @@
 	    }
 	  };
 	}
-
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A13016%2F__webpack_hmr", __webpack_require__(4)(module)))
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A21546%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
@@ -2442,7 +2442,7 @@
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Contact List</h1>\r\n\r\n<p *ngIf=\"!contacts\"><em>Loading...</em></p>\r\n\r\n<table class=\"table\" *ngIf=\"contacts\">\r\n    <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Name</th>\r\n            <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let contact of contacts\">\r\n            <td>{{contact.id}}</td>\r\n            <td>{{contact.name}}</td>\r\n            <td><a [routerLink]=\"['/contact-detail', contact.id]\" (click)=\"onSelect(contact)\">Details</a></td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+	module.exports = "<h1>Contact List</h1>\r\n\r\n<p *ngIf=\"!contacts\"><em>Loading...</em></p>\r\n\r\n<a [routerLink]=\"['/contact-detail']\">Create New Contact</a>\r\n\r\n<table class=\"table\" *ngIf=\"contacts\">\r\n    <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Name</th>\r\n            <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let contact of contacts\">\r\n            <td>{{contact.id}}</td>\r\n            <td>{{contact.name}}</td>\r\n            <td><a [routerLink]=\"['/contact-detail', contact.id]\" (click)=\"onSelect(contact)\">Details</a></td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
 
 /***/ },
 /* 45 */
@@ -2470,9 +2470,15 @@
 	    }
 	    ContactDetailComponent.prototype.ngOnInit = function () {
 	        var _this = this;
+	        var contactId;
 	        this.route.params
-	            .switchMap(function (params) { return _this.contactService.getById(params['id']); })
-	            .subscribe(function (contact) { return _this.contact = contact; });
+	            .switchMap(function (params) { return contactId = params['id']; });
+	        console.log(this.route.params);
+	        this.hasContactId = contactId == "";
+	        if (this.hasContactId) {
+	            this.contactService.getById(contactId)
+	                .then(function (contact) { return _this.contact = contact; });
+	        }
 	    };
 	    return ContactDetailComponent;
 	}());
@@ -2659,7 +2665,7 @@
 /* 50 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Contact Details</h1>\r\n<hr />\r\n<div *ngIf=\"contact\">\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>ID</dt>\r\n        <dd>{{contact.id}}</dd>\r\n        <dt>Name</dt>\r\n        <dd>{{contact.name}}</dd>\r\n        <dt>Address</dt>\r\n        <dd>{{contact.getAddress()}}</dd>\r\n        <dt>Phone</dt>\r\n        <dd>{{contact.phone}}</dd>\r\n        <dt>Email</dt>\r\n        <dd>{{contact.email}}</dd>\r\n    </dl>\r\n</div>\r\n<a routerLink=\"/contact-list\">Back to List</a>\r\n<hr />"
+	module.exports = "<h1>Contact Details</h1>\r\n<hr />\r\n<div *ngIf=\"contact\">\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>ID</dt>\r\n        <dd>{{contact.id}}</dd>\r\n        <dt>Name</dt>\r\n        <dd>{{contact.name}}</dd>\r\n        <dt>Address</dt>\r\n        <dd>{{contact.getAddress()}}</dd>\r\n        <dt>Phone</dt>\r\n        <dd>{{contact.phone}}</dd>\r\n        <dt>Email</dt>\r\n        <dd>{{contact.email}}</dd>\r\n    </dl>\r\n</div>\r\n<h3 *ngIf=\"!hasContactId\">\r\n    Place holder for creating a new contact\r\n</h3>\r\n<a routerLink=\"/contact-list\">Back to List</a>\r\n<hr />"
 
 /***/ },
 /* 51 */

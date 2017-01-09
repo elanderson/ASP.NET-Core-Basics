@@ -2,6 +2,8 @@
 
 <p *ngIf="!contacts"><em>Loading...</em></p>
 
+<a [routerLink]="['/contact-detail']">Create New Contact</a>
+
 <table class="table" *ngIf="contacts">
     <thead>
         <tr>
