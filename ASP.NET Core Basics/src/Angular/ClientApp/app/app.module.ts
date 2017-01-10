@@ -28,6 +28,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'contact-list', component: ContactListComponent },
+            { path: 'contact-detail', component: ContactDetailComponent },
             { path: 'contact-detail/:id', component: ContactDetailComponent },
             { path: '**', redirectTo: 'home' }
         ])

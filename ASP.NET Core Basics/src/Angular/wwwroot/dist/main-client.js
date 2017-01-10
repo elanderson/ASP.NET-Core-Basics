@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d88f9db07a929efb2fb5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "77964af6bc4cf33416f9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -775,7 +775,7 @@
 	  };
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A21546%2F__webpack_hmr", __webpack_require__(4)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?path=http%3A%2F%2Flocalhost%3A12750%2F__webpack_hmr", __webpack_require__(4)(module)))
 
 /***/ },
 /* 4 */
@@ -1993,6 +1993,7 @@
 	                { path: 'counter', component: counter_component_1.CounterComponent },
 	                { path: 'fetch-data', component: fetchdata_component_1.FetchDataComponent },
 	                { path: 'contact-list', component: contactlist_component_1.ContactListComponent },
+	                { path: 'contact-detail', component: contactdetail_component_1.ContactDetailComponent },
 	                { path: 'contact-detail/:id', component: contactdetail_component_1.ContactDetailComponent },
 	                { path: '**', redirectTo: 'home' }
 	            ])
@@ -2472,9 +2473,8 @@
 	        var _this = this;
 	        var contactId;
 	        this.route.params
-	            .switchMap(function (params) { return contactId = params['id']; });
-	        console.log(this.route.params);
-	        this.hasContactId = contactId == "";
+	            .subscribe(function (params) { return contactId = params['id']; });
+	        this.hasContactId = contactId != undefined;
 	        if (this.hasContactId) {
 	            this.contactService.getById(contactId)
 	                .then(function (contact) { return _this.contact = contact; });

@@ -21,10 +21,8 @@ export class ContactDetailComponent implements OnInit {
         var contactId: string;
 
         this.route.params
-            .switchMap((params: Params) => contactId = params['id']);
-
-        console.log(this.route.params);
-        this.hasContactId = contactId == "";
+            .subscribe((params: Params) => contactId = params['id']);
+        this.hasContactId = contactId != undefined;
 
         if (this.hasContactId) {
             this.contactService.getById(contactId)
