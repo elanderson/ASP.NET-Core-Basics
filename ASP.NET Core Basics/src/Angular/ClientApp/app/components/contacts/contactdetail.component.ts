@@ -11,14 +11,22 @@ import { ContactService } from './contact.service';
 })
 export class ContactDetailComponent implements OnInit {
     contact: Contact;
+    hasContactId: boolean;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
                 private contactService: ContactService) { }
 
     ngOnInit(): void {
+        var contactId: string;
+
         this.route.params
-            .switchMap((params: Params) => this.contactService.getById(params['id']))
-            .subscribe((contact :Contact) => this.contact = contact);
+            .subscribe((params: Params) => contactId = params['id']);
+        this.hasContactId = contactId != undefined;
+
+        if (this.hasContactId) {
+            this.contactService.getById(contactId)
+                .then((contact: Contact) => this.contact = contact);
+        }
     }
 }
