@@ -1,7 +1,7 @@
 ﻿<template>
     <h1>Contact Details</h1>
     <hr />
-    <div if.bind="contact">
+    <div if.bind="hasContactId">
         <dl class="dl-horizontal">
             <dt>ID</dt>
             <dd>${contact.id}</dd>
@@ -15,9 +15,58 @@
             <dd>${contact.email}</dd>
         </dl>
     </div>
-    <h3 if.bind="!hasContactId">
-        Place holder for creating a new contact
-    </h3>
+    <div if.bind="!hasContactId">
+        <div>
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="name" class="form-control" value.bind="contact.name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="address" class="form-control" value.bind="contact.address" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="city" class="form-control" value.bind="contact.city" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="state" class="form-control" value.bind="contact.state" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Zip</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="zip" class="form-control" value.bind="contact.postalCode" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="phone" class="form-control" value.bind="contact.phone" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" placeholder="email" class="form-control" value.bind="contact.email" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="btn-group" role="group">
+            <button class="btn btn-success btn-lg" click.delegate="save()">Save</button>
+            <button class="btn btn-danger btn-lg" click.delegate="cancel()">Cancel</button>
+        </div>
+    </div>
     <a route-href="route: contactlist">Back to List</a>
     <hr />
 </template>
