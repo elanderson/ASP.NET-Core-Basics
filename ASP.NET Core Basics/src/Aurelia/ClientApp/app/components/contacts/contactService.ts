@@ -1,4 +1,4 @@
-﻿import { HttpClient } from 'aurelia-fetch-client';
+﻿import { HttpClient, json } from 'aurelia-fetch-client';
 import { inject } from 'aurelia-framework';
 import { Contact } from './contact';
 
@@ -12,7 +12,7 @@ export class ContactService {
         });
     }
 
-    getAll() : Promise<Contact[]> {
+    getAll(): Promise<Contact[]> {
         return this.http.fetch('')
             .then(response => response.json())
             .then(contacts => Array.from(contacts, c => new Contact(c)))
@@ -21,6 +21,17 @@ export class ContactService {
 
     getById(id: string): Promise<Contact> {
         return this.http.fetch(id)
+            .then(response => response.json())
+            .then(contact => new Contact(contact))
+            .catch(error => console.log(error));
+    }
+
+    save(contact: Contact): Promise<Contact> {
+        return this.http.fetch('',
+            {
+                method: 'post',
+                body: json(contact)
+            })
             .then(response => response.json())
             .then(contact => new Contact(contact))
             .catch(error => console.log(error));

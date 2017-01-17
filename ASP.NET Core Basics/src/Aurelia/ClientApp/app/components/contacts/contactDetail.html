@@ -62,11 +62,13 @@
                 </div>
             </form>
         </div>
-        <div class="btn-group" role="group">
+        <div class="text-center">
             <button class="btn btn-success btn-lg" click.delegate="save()">Save</button>
-            <button class="btn btn-danger btn-lg" click.delegate="cancel()">Cancel</button>
+            <button class="btn btn-danger btn-lg" click.delegate="reset()">Reset</button>
         </div>
     </div>
-    <a route-href="route: contactlist">Back to List</a>
+    <div>
+        <a route-href="route: contactlist">Back to List</a>
+    </div>
     <hr />
 </template>
