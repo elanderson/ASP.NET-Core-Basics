@@ -4,7 +4,7 @@ import { ContactService } from './contactService';
 
 @inject(ContactService)
 export class ContactDetail {
-     contact: Contact;
+     contact: Contact = new Contact();
      hasContactId: boolean;
 
     constructor(private contactService: ContactService) { }
@@ -18,7 +18,16 @@ export class ContactDetail {
         }
 
         return null;
+    }
 
+    reset() {
+        this.contact = new Contact();
+    }
+
+    save() {
+        this.contactService.save(this.contact)
+            .then(contact => this.contact = contact)
+            .then(() => this.hasContactId = true);
     }
 
 }

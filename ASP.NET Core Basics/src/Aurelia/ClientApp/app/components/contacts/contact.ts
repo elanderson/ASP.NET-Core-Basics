@@ -8,7 +8,8 @@
     phone: string;
     email: string;
 
-    constructor(data) {
+    constructor(data?) {
+        if (data == null) return;
         Object.assign(this, data);
     }
 
