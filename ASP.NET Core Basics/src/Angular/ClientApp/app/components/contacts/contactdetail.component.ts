@@ -10,7 +10,7 @@ import { ContactService } from './contact.service';
     providers: [ContactService]
 })
 export class ContactDetailComponent implements OnInit {
-    contact: Contact;
+    contact: Contact = new Contact();
     hasContactId: boolean;
 
     constructor(private route: ActivatedRoute,
@@ -28,5 +28,15 @@ export class ContactDetailComponent implements OnInit {
             this.contactService.getById(contactId)
                 .then((contact: Contact) => this.contact = contact);
         }
+    }
+
+    reset() {
+        this.contact = new Contact();
+    }
+
+    save() {
+        this.contactService.save(this.contact)
+            .then(contact => this.contact = contact)
+            .then(() => this.hasContactId = true);
     }
 }
