@@ -1,20 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6446DEF2-D423-47E2-85CC-691A52915EC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{25E0D9CE-555B-4E04-A9C6-77351CBAA237}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Contacts", "src\Contacts\Contacts.xproj", "{A1208011-947A-475C-9011-E2657FAB5A31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts", "src\Contacts\Contacts.csproj", "{A1208011-947A-475C-9011-E2657FAB5A31}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Aurelia", "src\Aurelia\Aurelia.xproj", "{EB45A937-E3EF-4B0F-A674-92B44BEA3FDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurelia", "src\Aurelia\Aurelia.csproj", "{EB45A937-E3EF-4B0F-A674-92B44BEA3FDA}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Angular", "src\Angular\Angular.xproj", "{F27EF346-050A-4AC6-BCAA-D2446246240C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular", "src\Angular\Angular.csproj", "{F27EF346-050A-4AC6-BCAA-D2446246240C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

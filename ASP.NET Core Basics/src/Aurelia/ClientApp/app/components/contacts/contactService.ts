@@ -14,7 +14,7 @@ export class ContactService {
 
     getAll(): Promise<Contact[]> {
         return this.http.fetch('')
-            .then(response => response.json())
+            .then(response => response.json() as Promise<Contact[]>)
             .then(contacts => Array.from(contacts, c => new Contact(c)))
             .catch(error => console.log(error));
     }
