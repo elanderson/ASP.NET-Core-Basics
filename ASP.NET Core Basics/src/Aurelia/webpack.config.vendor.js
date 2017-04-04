@@ -6,12 +6,12 @@ var extractCSS = new ExtractTextPlugin('vendor.css');
 
 module.exports = {
     resolve: {
-        extensions: [ '.js' ]
+        extensions: ['.js']
     },
     module: {
         loaders: [
             { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000' },
-            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) }
+            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css-loader']) }
         ]
     },
     entry: {
@@ -35,6 +35,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'wwwroot', 'dist'),
+        publicPath: '/dist/',
         filename: '[name].js',
         library: '[name]_[hash]',
     },
