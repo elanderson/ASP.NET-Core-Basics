@@ -5,7 +5,7 @@ var AureliaWebpackPlugin = require('aurelia-webpack-plugin');
 
 var bundleOutputDir = './wwwroot/dist';
 module.exports = {
-    resolve: { extensions: [ '.js', '.ts' ] },
+    resolve: { extensions: ['.js', '.ts'] },
     entry: { 'app': 'aurelia-bootstrapper-webpack' }, // Note: The aurelia-webpack-plugin will add your app's modules to this bundle automatically
     output: {
         path: path.resolve(bundleOutputDir),
@@ -14,10 +14,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.ts$/, include: /ClientApp/, loader: 'ts', query: { silent: true } },
-            { test: /\.html$/, loader: 'html' },
-            { test: /\.css$/, loaders: [ 'style', 'css' ] },
-            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
+            { test: /\.ts$/, include: /ClientApp/, loader: 'ts-loader', query: { silent: true } },
+            { test: /\.html$/, loader: 'html-loader' },
+            { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+            { test: /\.json$/, loader: 'json-loader' }
         ]
     },
     plugins: [
@@ -38,7 +39,7 @@ module.exports = {
             moduleFilenameTemplate: path.relative(bundleOutputDir, '[resourcePath]') // Point sourcemap entries to the original file locations on disk
         })
     ] : [
-        // Plugins that apply in production builds only
-        new webpack.optimize.UglifyJsPlugin()
-    ])
+            // Plugins that apply in production builds only
+            new webpack.optimize.UglifyJsPlugin()
+        ])
 };
