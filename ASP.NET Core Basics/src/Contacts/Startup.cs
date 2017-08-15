@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Contacts.Data;
 using Contacts.Models;
 using Contacts.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace Contacts
 {
