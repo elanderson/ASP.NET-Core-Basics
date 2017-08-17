@@ -4,7 +4,7 @@ import { ContactService } from './contact.service';
 
 @Component({
     selector: 'contactlist',
-    template: require('./contactlist.component.html'),
+    template: './contactlist.component.html',
     providers: [ContactService]
 })
 export class ContactListComponent implements OnInit {

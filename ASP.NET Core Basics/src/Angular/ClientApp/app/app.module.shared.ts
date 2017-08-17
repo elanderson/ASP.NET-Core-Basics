@@ -1,28 +1,28 @@
-import { NgModule } from '@angular/core';
+﻿import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { UniversalModule } from 'angular2-universal';
-import { AppComponent } from './components/app/app.component'
+
+import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
+import { CounterComponent } from './components/counter/counter.component';
 import { ContactListComponent } from './components/contacts/contactlist.component';
 import { ContactDetailComponent } from './components/contacts/contactdetail.component';
-import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
     declarations: [
         AppComponent,
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        ContactListComponent,
-        ContactDetailComponent,
         HomeComponent
     ],
     imports: [
-        UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
+        CommonModule,
+        HttpModule,
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -36,5 +36,5 @@ import { CounterComponent } from './components/counter/counter.component';
         ])
     ]
 })
-export class AppModule {
+export class AppModuleShared {
 }
