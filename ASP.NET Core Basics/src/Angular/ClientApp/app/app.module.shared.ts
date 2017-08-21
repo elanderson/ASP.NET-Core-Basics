@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -9,6 +9,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+
 import { ContactListComponent } from './components/contacts/contactlist.component';
 import { ContactDetailComponent } from './components/contacts/contactdetail.component';
 
@@ -18,6 +19,8 @@ import { ContactDetailComponent } from './components/contacts/contactdetail.comp
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
+        ContactListComponent,
+        ContactDetailComponent,
         HomeComponent
     ],
     imports: [
