@@ -1,4 +1,4 @@
-import { Aurelia } from 'aurelia-framework';
+import { Aurelia, PLATFORM } from 'aurelia-framework';
 import { Router, RouterConfiguration } from 'aurelia-router';
 
 export class App {
@@ -10,21 +10,21 @@ export class App {
             route: ['', 'home'],
             name: 'home',
             settings: { icon: 'home' },
-            moduleId: '../home/home',
+            moduleId: PLATFORM.moduleName('../home/home'),
             nav: true,
             title: 'Home'
         }, {
             route: 'counter',
             name: 'counter',
             settings: { icon: 'education' },
-            moduleId: '../counter/counter',
+            moduleId: PLATFORM.moduleName('../counter/counter'),
             nav: true,
             title: 'Counter'
         }, {
             route: 'fetch-data',
             name: 'fetchdata',
             settings: { icon: 'th-list' },
-            moduleId: '../fetchdata/fetchdata',
+            moduleId: PLATFORM.moduleName('../fetchdata/fetchdata'),
             nav: true,
             title: 'Fetch data'
         },
@@ -32,14 +32,14 @@ export class App {
             route: 'contact-list',
             name: 'contactlist',
             settings: { icon: 'list-alt' },
-            moduleId: '../contacts/contactList',
+            moduleId: PLATFORM.moduleName('../contacts/contactList'),
             nav: true,
             title: 'Contact List'
         },
         {
             route: 'contact-detail/:id?',
             name: 'contactdetail',
-            moduleId: '../contacts/contactDetail',
+            moduleId: PLATFORM.moduleName('../contacts/contactDetail'),
             nav: false,
             title: 'Contact Detail'
         }]);

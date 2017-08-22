@@ -9,12 +9,12 @@ export class ContactDetail {
 
     constructor(private contactService: ContactService) { }
 
-    activate(parms, routeConfig) {
+    activate(parms: any, routeConfig: any) {
         this.hasContactId = parms.id;
 
         if (this.hasContactId) {
             return this.contactService.getById(parms.id)
-                .then(contact => this.contact = contact);          
+                .then(contact => this.contact = contact);
         }
 
         return null;
