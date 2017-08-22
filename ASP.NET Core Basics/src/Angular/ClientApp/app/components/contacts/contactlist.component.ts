@@ -9,7 +9,7 @@ import { ContactService } from './contact.service';
 })
 export class ContactListComponent implements OnInit {
     contacts: Contact[];
-    selectedContactId: number = null;
+    selectedContactId: number = -1;
 
     constructor(private contactService: ContactService) { }
 
@@ -18,7 +18,7 @@ export class ContactListComponent implements OnInit {
             .then(contacts => this.contacts = contacts);
     }
 
-    onSelect(contact) {
+    onSelect(contact: Contact) {
         this.selectedContactId = contact.id;
     }
 }

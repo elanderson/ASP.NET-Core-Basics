@@ -10,7 +10,7 @@ import { ContactService } from './contact.service';
     providers: [ContactService]
 })
 export class ContactDetailComponent implements OnInit {
-    contact: Contact = new Contact();
+    contact = new Contact();
     hasContactId: boolean;
 
     constructor(private route: ActivatedRoute,
@@ -18,7 +18,7 @@ export class ContactDetailComponent implements OnInit {
                 private contactService: ContactService) { }
 
     ngOnInit(): void {
-        var contactId: string;
+        var contactId = "";
 
         this.route.params
             .subscribe((params: Params) => contactId = params['id']);
