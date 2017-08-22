@@ -4,12 +4,12 @@ import { ContactService } from './contact.service';
 
 @Component({
     selector: 'contactlist',
-    template: require('./contactlist.component.html'),
+    template: './contactlist.component.html',
     providers: [ContactService]
 })
 export class ContactListComponent implements OnInit {
     contacts: Contact[];
-    selectedContactId: number = null;
+    selectedContactId: number = -1;
 
     constructor(private contactService: ContactService) { }
 
@@ -18,7 +18,7 @@ export class ContactListComponent implements OnInit {
             .then(contacts => this.contacts = contacts);
     }
 
-    onSelect(contact) {
+    onSelect(contact: Contact) {
         this.selectedContactId = contact.id;
     }
 }

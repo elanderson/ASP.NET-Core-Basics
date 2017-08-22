@@ -8,12 +8,12 @@
     phone: string;
     email: string;
 
-    constructor(data?) {
+    constructor(data?: any) {
         if (data == null) return;
         Object.assign(this, data);
     }
 
-    getAddress() {
+    getAddress(): string {
         return `${this.address} ${this.city}, ${this.state} ${this.postalCode}`;
     }
 
