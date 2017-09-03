@@ -29,6 +29,9 @@ namespace Contacts.Controllers
 
         // GET: api/ContactsApi/5
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Contact), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> GetContact([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -36,7 +39,7 @@ namespace Contacts.Controllers
                 return BadRequest(ModelState);
             }
 
-            Contact contact = await _context.Contact.SingleOrDefaultAsync(m => m.Id == id);
+            var contact = await _context.Contact.SingleOrDefaultAsync(m => m.Id == id);
 
             if (contact == null)
             {
@@ -48,6 +51,11 @@ namespace Contacts.Controllers
 
         // PUT: api/ContactsApi/5
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(Contact), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 404)]
+        [ProducesResponseType(typeof(void), 204)]
         public async Task<IActionResult> PutContact([FromRoute] int id, [FromBody] Contact contact)
         {
             if (!ModelState.IsValid)
@@ -72,10 +80,8 @@ namespace Contacts.Controllers
                 {
                     return NotFound();
                 }
-                else
-                {
-                    throw;
-                }
+
+                throw;
             }
 
             return NoContent();
@@ -83,6 +89,11 @@ namespace Contacts.Controllers
 
         // POST: api/ContactsApi
         [HttpPost]
+        [ProducesResponseType(typeof(Contact), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 404)]
+        [ProducesResponseType(typeof(void), 409)]
         public async Task<IActionResult> PostContact([FromBody] Contact contact)
         {
             if (!ModelState.IsValid)
@@ -101,10 +112,7 @@ namespace Contacts.Controllers
                 {
                     return new StatusCodeResult(StatusCodes.Status409Conflict);
                 }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return CreatedAtAction("GetContact", new { id = contact.Id }, contact);
@@ -112,6 +120,10 @@ namespace Contacts.Controllers
 
         // DELETE: api/ContactsApi/5
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(Contact), 200)]
+        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> DeleteContact([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -119,7 +131,7 @@ namespace Contacts.Controllers
                 return BadRequest(ModelState);
             }
 
-            Contact contact = await _context.Contact.SingleOrDefaultAsync(m => m.Id == id);
+            var contact = await _context.Contact.SingleOrDefaultAsync(m => m.Id == id);
             if (contact == null)
             {
                 return NotFound();

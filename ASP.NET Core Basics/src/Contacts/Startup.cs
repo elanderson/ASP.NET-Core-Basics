@@ -8,6 +8,7 @@ using Contacts.Data;
 using Contacts.Models;
 using Contacts.Services;
 using Microsoft.AspNetCore.Identity;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Contacts
 {
@@ -52,7 +53,10 @@ namespace Contacts
             services.AddDbContext<ContactsContext>(options =>
                     options.UseSqlServer(Configuration["Data:ContactsContext:ConnectionString"]));
 
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Contacts API", Version = "v1"});
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,7 +98,10 @@ namespace Contacts
             });
 
             app.UseSwagger();
-            app.UseSwaggerUi();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Contacts API V1");
+            });
         }
     }
 }
