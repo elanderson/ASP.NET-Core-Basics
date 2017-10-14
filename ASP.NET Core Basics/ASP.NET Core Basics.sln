@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6446DEF2-D423-47E2-85CC-691A52915EC2}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurelia", "src\Aurelia\Aurelia.csproj", "{EB45A937-E3EF-4B0F-A674-92B44BEA3FDA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular", "src\Angular\Angular.csproj", "{F27EF346-050A-4AC6-BCAA-D2446246240C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "React", "React\React.csproj", "{309AB54C-C4ED-4E7E-870C-9032A970E3CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{F27EF346-050A-4AC6-BCAA-D2446246240C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27EF346-050A-4AC6-BCAA-D2446246240C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27EF346-050A-4AC6-BCAA-D2446246240C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309AB54C-C4ED-4E7E-870C-9032A970E3CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309AB54C-C4ED-4E7E-870C-9032A970E3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309AB54C-C4ED-4E7E-870C-9032A970E3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309AB54C-C4ED-4E7E-870C-9032A970E3CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,9 @@ Global
 		{A1208011-947A-475C-9011-E2657FAB5A31} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
 		{EB45A937-E3EF-4B0F-A674-92B44BEA3FDA} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
 		{F27EF346-050A-4AC6-BCAA-D2446246240C} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
+		{309AB54C-C4ED-4E7E-870C-9032A970E3CF} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {810FF428-282C-444B-9C2A-660B9AAE9D8F}
 	EndGlobalSection
 EndGlobal
