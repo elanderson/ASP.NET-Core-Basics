@@ -1,6 +1,7 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import 'isomorphic-fetch';
+import { Contact } from './contact';
 
 interface ContactListState {
     contacts: Contact[];
@@ -48,15 +49,4 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
             </tbody>
         </table>;
     }
-}
-
-interface Contact {
-    id: number;
-    name: string;
-    address: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    phone: string;
-    email: string;
 }

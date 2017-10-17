@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "571ea5dcc8c5e685d951"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2748070146a436907b9f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -8127,11 +8127,13 @@ var ContactList = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("thead", null,
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", null,
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "ID"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Name"))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Name"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Test"))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tbody", null, contacts.map(function (contact) {
                 return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", { key: contact.id },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, contact.id),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, contact.name));
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, contact.name),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, contact.getAddress()));
             })));
     };
     return ContactList;
