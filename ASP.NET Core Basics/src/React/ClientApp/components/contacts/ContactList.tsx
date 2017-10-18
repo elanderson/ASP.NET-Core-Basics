@@ -2,6 +2,7 @@
 import { RouteComponentProps } from 'react-router';
 import 'isomorphic-fetch';
 import { Contact } from './contact';
+import { ContactService } from './contactService';
 
 interface ContactListState {
     contacts: Contact[];
@@ -13,8 +14,8 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
         super();
         this.state = { contacts: [], loading: true };
 
-        fetch('http://localhost:13322/api/contactsApi/')
-            .then(response => response.json() as Promise<Contact[]>)
+        let contactService = new ContactService();
+        contactService.getAll()
             .then(data => {
                 this.setState({ contacts: data, loading: false });
             });
