@@ -1,19 +1,20 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 import { Contact } from './contact';
 import { ContactService } from './contactService';
 
 interface ContactListState {
+    id: string;
     contacts: Contact[];
     loading: boolean;
 }
 
-export class ContactList extends React.Component<RouteComponentProps<{}>, ContactListState> {
-    constructor() {
+export class ContactDetail extends React.Component<RouteComponentProps<{}>, ContactListState> {
+
+    constructor(props: any) {
         super();
-        this.state = { contacts: [], loading: true };
+        this.state = { id: props.match.params.id, contacts: [], loading: true };
 
         let contactService = new ContactService();
         contactService.getAll()
@@ -25,10 +26,10 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : ContactList.renderContactsTable(this.state.contacts);
+            : ContactDetail.renderContactsTable(this.state.contacts);
 
         return <div>
-            <h1>Contact List</h1>
+            <h1>Contact List {this.state.id}</h1>
             {contents}
         </div>;
     }
@@ -44,7 +45,7 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
             <tbody>
                 {contacts.map(contact =>
                     <tr key={contact.id}>
-                        <td><Link to={`contactdetail/${contact.id}`}>{contact.id}</Link></td>
+                        <td>{contact.id}</td>
                         <td>{contact.name}</td>
                     </tr>
                 )}
