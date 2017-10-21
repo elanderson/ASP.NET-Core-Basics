@@ -1,55 +1,57 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
 import 'isomorphic-fetch';
 import { Contact } from './contact';
 import { ContactService } from './contactService';
 
-interface ContactListState {
+interface ContactDetailState {
     id: string;
-    contacts: Contact[];
+    contact: Contact | undefined;
     loading: boolean;
 }
 
-export class ContactDetail extends React.Component<RouteComponentProps<{}>, ContactListState> {
+export class ContactDetail extends React.Component<RouteComponentProps<{}>, ContactDetailState> {
 
     constructor(props: any) {
         super();
-        this.state = { id: props.match.params.id, contacts: [], loading: true };
+        this.state = { id: props.match.params.id, contact: undefined, loading: true };
 
         let contactService = new ContactService();
-        contactService.getAll()
+        contactService.getById(this.state.id)
             .then(data => {
-                this.setState({ contacts: data, loading: false });
+                this.setState({ contact: data, loading: false });
             });
     }
 
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : ContactDetail.renderContactsTable(this.state.contacts);
+            : this.state.contact
+                ? ContactDetail.renderContactsTable(this.state.contact)
+                : <p>No contacts</p>;
 
         return <div>
-            <h1>Contact List {this.state.id}</h1>
+            <h1>Contact Detail</h1>
+            <hr />
             {contents}
+            <NavLink to={'/contactlist'}>Back to List</NavLink>
+            <hr />
         </div>;
     }
 
-    private static renderContactsTable(contacts: Contact[]) {
-        return <table className='table'>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                {contacts.map(contact =>
-                    <tr key={contact.id}>
-                        <td>{contact.id}</td>
-                        <td>{contact.name}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
+    private static renderContactsTable(contact: Contact) {
+        return <dl className="dl-horizontal">
+                   <dt>ID</dt>
+                   <dd>{contact.id}</dd>
+                   <dt>Name</dt>
+                   <dd>{contact.name}</dd>
+                   <dt>Address</dt>
+                   <dd>{contact.getAddress()}</dd>
+                   <dt>Phone</dt>
+                   <dd>{contact.phone}</dd>
+                   <dt>Email</dt>
+                   <dd>{contact.email}</dd>
+               </dl>;
     }
 }

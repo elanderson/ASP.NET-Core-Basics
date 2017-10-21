@@ -12,17 +12,7 @@ export class ContactService {
     }
 
     getById(id: string): Promise<Contact> {
-        return fetch(`${this.baseUrl}id`)
-            .then(response => response.json())
-            .then(contact => new Contact(contact));
-    }
-
-    save(contact: Contact): Promise<Contact> {
-        return fetch(this.baseUrl,
-                {
-                    method: 'post',
-                    body: JSON.stringify(contact)
-                })
+        return fetch(`${this.baseUrl}${id}`)
             .then(response => response.json())
             .then(contact => new Contact(contact));
     }
