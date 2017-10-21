@@ -6,9 +6,12 @@
     "target": "es5",
     "jsx": "react",
     "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "skipDefaultLibCheck": true,
     "strict": true,
-    "types": ["webpack-env"]
+    "lib": [ "es6", "dom" ],
+    "types": [ "webpack-env" ]
   },
   "exclude": [
       "bin",

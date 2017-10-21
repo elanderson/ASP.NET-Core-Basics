@@ -1,6 +1,9 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
+import { Link } from 'react-router-dom';
 import 'isomorphic-fetch';
+import { Contact } from './contact';
+import { ContactService } from './contactService';
 
 interface ContactListState {
     contacts: Contact[];
@@ -12,8 +15,8 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
         super();
         this.state = { contacts: [], loading: true };
 
-        fetch('http://localhost:13322/api/contactsApi/')
-            .then(response => response.json() as Promise<Contact[]>)
+        let contactService = new ContactService();
+        contactService.getAll()
             .then(data => {
                 this.setState({ contacts: data, loading: false });
             });
@@ -41,22 +44,11 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
             <tbody>
                 {contacts.map(contact =>
                     <tr key={contact.id}>
-                        <td>{contact.id}</td>
+                        <td><Link to={`contactdetail/${contact.id}`}>{contact.id}</Link></td>
                         <td>{contact.name}</td>
                     </tr>
                 )}
             </tbody>
         </table>;
     }
-}
-
-interface Contact {
-    id: number;
-    name: string;
-    address: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    phone: string;
-    email: string;
 }
