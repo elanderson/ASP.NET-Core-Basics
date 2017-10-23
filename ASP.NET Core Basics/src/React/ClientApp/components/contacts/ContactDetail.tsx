@@ -1,6 +1,6 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import 'isomorphic-fetch';
 import { Contact } from './contact';
 import { ContactService } from './contactService';
@@ -27,9 +27,9 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.state.contact
-                ? ContactDetail.renderContactsTable(this.state.contact)
-                : <p>No contacts</p>;
+            : this.state.contact != undefined
+                ? ContactDetail.renderExistingContact(this.state.contact)
+                : <p>No contact</p>;
 
         return <div>
             <h1>Contact Detail</h1>
@@ -40,7 +40,7 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
         </div>;
     }
 
-    private static renderContactsTable(contact: Contact) {
+    private static renderExistingContact(contact: Contact) {
         return <dl className="dl-horizontal">
                    <dt>ID</dt>
                    <dd>{contact.id}</dd>

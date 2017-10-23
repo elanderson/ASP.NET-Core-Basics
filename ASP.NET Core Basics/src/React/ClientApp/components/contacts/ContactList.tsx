@@ -29,6 +29,7 @@ export class ContactList extends React.Component<RouteComponentProps<{}>, Contac
 
         return <div>
             <h1>Contact List</h1>
+            <Link to={'contactdetail'}>Create New Contact</Link>
             {contents}
         </div>;
     }
