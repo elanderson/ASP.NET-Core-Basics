@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a89317ea8da3898bc7ec"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6fbcb12550b6e9b887ae"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -8126,7 +8126,8 @@ var NavMenu = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contactService__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contactService__ = __webpack_require__(59);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8141,25 +8142,31 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
+
 var ContactDetail = (function (_super) {
     __extends(ContactDetail, _super);
     function ContactDetail(props) {
         var _this = _super.call(this) || this;
-        _this.state = { id: props.match.params.id, contact: undefined, loading: true };
-        var contactService = new __WEBPACK_IMPORTED_MODULE_3__contactService__["a" /* ContactService */]();
-        contactService.getById(_this.state.id)
-            .then(function (data) {
-            _this.setState({ contact: data, loading: false });
-        });
+        if (props.match.params.id == undefined) {
+            _this.state = { id: props.match.params.id, contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */](), loading: false };
+        }
+        else {
+            _this.state = { id: props.match.params.id, contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */](), loading: true };
+            var contactService = new __WEBPACK_IMPORTED_MODULE_4__contactService__["a" /* ContactService */]();
+            contactService.getById(_this.state.id)
+                .then(function (data) {
+                _this.setState({ contact: data, loading: false });
+            });
+        }
         return _this;
     }
     ContactDetail.prototype.render = function () {
         var contents = this.state.loading
             ? __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null,
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("em", null, "Loading..."))
-            : this.state.contact != undefined
-                ? ContactDetail.renderExistingContactsTable(this.state.contact)
-                : __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "No contact");
+            : this.state.id != undefined
+                ? ContactDetail.renderExistingContact(this.state.contact)
+                : this.renderNewContact();
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Contact Detail"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("hr", null),
@@ -8167,7 +8174,7 @@ var ContactDetail = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"], { to: '/contactlist' }, "Back to List"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("hr", null));
     };
-    ContactDetail.renderExistingContactsTable = function (contact) {
+    ContactDetail.renderExistingContact = function (contact) {
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dl", { className: "dl-horizontal" },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "ID"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.id),
@@ -8179,6 +8186,45 @@ var ContactDetail = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.phone),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "Email"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.email));
+    };
+    ContactDetail.prototype.reset = function () {
+        this.setState({ contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */]() });
+    };
+    ContactDetail.prototype.renderNewContact = function () {
+        var _this = this;
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("form", { role: "form", className: "form-horizontal" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Name"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "name", className: "form-control", value: this.state.contact.name }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Address"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "address", className: "form-control", value: this.state.contact.address }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "City"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "city", className: "form-control", value: this.state.contact.city }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "State"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "state", className: "form-control", value: this.state.contact.state }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Zip"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "zip", className: "form-control", value: this.state.contact.postalCode }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Phone"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "phone", className: "form-control", value: this.state.contact.phone }))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Email"),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "email", placeholder: "email", className: "form-control", value: this.state.contact.email })))),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "text-center" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn btn-success btn-lg", type: "submit" }, "Save"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn btn-danger btn-lg", onClick: function () { return _this.reset(); } }, "Reset"))));
     };
     return ContactDetail;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
