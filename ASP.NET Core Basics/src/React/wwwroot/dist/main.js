@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6fbcb12550b6e9b887ae"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a1cb16cba67233c4cef6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1269,7 +1269,7 @@ var routes = __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPO
     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["Route"], { path: '/contactdetail/:id?', component: __WEBPACK_IMPORTED_MODULE_7__components_contacts_ContactDetail__["a" /* ContactDetail */] }));
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\routes.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\routes.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\routes.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\routes.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -2558,7 +2558,7 @@ var ContactService = (function () {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contactService.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contactService.ts"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contactService.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contactService.ts"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -2638,7 +2638,7 @@ if (true) {
 }
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\boot.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\boot.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -7854,7 +7854,7 @@ var Counter = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Counter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Counter.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Counter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Counter.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -7922,7 +7922,7 @@ var FetchData = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\FetchData.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\FetchData.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\FetchData.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\FetchData.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8007,7 +8007,7 @@ var Home = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Home.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Home.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Home.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Home.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8048,7 +8048,7 @@ var Layout = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Layout.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Layout.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Layout.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\Layout.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8112,7 +8112,7 @@ var NavMenu = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\NavMenu.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\NavMenu.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\NavMenu.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\NavMenu.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8126,8 +8126,7 @@ var NavMenu = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_isomorphic_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contactService__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contactService__ = __webpack_require__(59);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8142,20 +8141,36 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
-
 var ContactDetail = (function (_super) {
     __extends(ContactDetail, _super);
     function ContactDetail(props) {
         var _this = _super.call(this) || this;
         if (props.match.params.id == undefined) {
-            _this.state = { id: props.match.params.id, contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */](), loading: false };
+            _this.state = {
+                id: props.match.params.id,
+                name: '', address: '', city: '',
+                state: '', postalCode: '', phone: '',
+                email: '',
+                loading: false
+            };
         }
         else {
-            _this.state = { id: props.match.params.id, contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */](), loading: true };
-            var contactService = new __WEBPACK_IMPORTED_MODULE_4__contactService__["a" /* ContactService */]();
+            _this.state = {
+                id: props.match.params.id,
+                name: '', address: '', city: '',
+                state: '', postalCode: '', phone: '',
+                email: '',
+                loading: true
+            };
+            var contactService = new __WEBPACK_IMPORTED_MODULE_3__contactService__["a" /* ContactService */]();
             contactService.getById(_this.state.id)
                 .then(function (data) {
-                _this.setState({ contact: data, loading: false });
+                _this.setState({
+                    name: data.name, address: data.address, city: data.city,
+                    state: data.state, postalCode: data.postalCode, phone: data.phone,
+                    email: data.email,
+                    loading: false
+                });
             });
         }
         return _this;
@@ -8165,7 +8180,7 @@ var ContactDetail = (function (_super) {
             ? __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null,
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("em", null, "Loading..."))
             : this.state.id != undefined
-                ? ContactDetail.renderExistingContact(this.state.contact)
+                ? this.renderExistingContact()
                 : this.renderNewContact();
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", null, "Contact Detail"),
@@ -8174,21 +8189,39 @@ var ContactDetail = (function (_super) {
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["NavLink"], { to: '/contactlist' }, "Back to List"),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("hr", null));
     };
-    ContactDetail.renderExistingContact = function (contact) {
+    ContactDetail.prototype.renderExistingContact = function () {
         return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dl", { className: "dl-horizontal" },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "ID"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.id),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, this.state.id),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "Name"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.name),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, this.state.name),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "Address"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.getAddress()),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null,
+                this.state.address,
+                " ",
+                this.state.city,
+                ", ",
+                this.state.state,
+                " ",
+                this.state.postalCode),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "Phone"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.phone),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, this.state.phone),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dt", null, "Email"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, contact.email));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("dd", null, this.state.email));
+    };
+    ContactDetail.prototype.handleChange = function (event) {
+        var target = event.target;
+        var value = target.value;
+        var name = target.name;
+        this.setState((_a = {}, _a[name] = value, _a));
+        var _a;
     };
     ContactDetail.prototype.reset = function () {
-        this.setState({ contact: new __WEBPACK_IMPORTED_MODULE_3__contact__["a" /* Contact */]() });
+        this.setState({
+            name: '', address: '', city: '',
+            state: '', postalCode: '', phone: '',
+            email: ''
+        });
     };
     ContactDetail.prototype.renderNewContact = function () {
         var _this = this;
@@ -8197,31 +8230,31 @@ var ContactDetail = (function (_super) {
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Name"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "name", className: "form-control", value: this.state.contact.name }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "name", className: "form-control", name: "name", value: this.state.name, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Address"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "address", className: "form-control", value: this.state.contact.address }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "address", className: "form-control", name: "address", value: this.state.address, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "City"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "city", className: "form-control", value: this.state.contact.city }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "city", className: "form-control", name: "city", value: this.state.city, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "State"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "state", className: "form-control", value: this.state.contact.state }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "state", className: "form-control", name: "state", value: this.state.state, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Zip"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "zip", className: "form-control", value: this.state.contact.postalCode }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "zip", className: "form-control", name: "postalCode", value: this.state.postalCode, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Phone"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "phone", className: "form-control", value: this.state.contact.phone }))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", placeholder: "phone", className: "form-control", name: "phone", value: this.state.phone, onChange: function (e) { return _this.handleChange(e); } }))),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "col-sm-2 control-label" }, "Email"),
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "col-sm-10" },
-                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "email", placeholder: "email", className: "form-control", value: this.state.contact.email })))),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "email", placeholder: "email", className: "form-control", name: "email", value: this.state.email, onChange: function (e) { return _this.handleChange(e); } })))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "text-center" },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn btn-success btn-lg", type: "submit" }, "Save"),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { className: "btn btn-danger btn-lg", onClick: function () { return _this.reset(); } }, "Reset"))));
@@ -8231,7 +8264,7 @@ var ContactDetail = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactDetail.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactDetail.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactDetail.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactDetail.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8300,7 +8333,7 @@ var ContactList = (function (_super) {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactList.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactList.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactList.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\ContactList.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),
@@ -8323,7 +8356,7 @@ var Contact = (function () {
 
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contact.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\eanderson\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contact.ts"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contact.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ericl\\Source\\Repos\\ASP.NET-Core-Basics\\ASP.NET Core Basics\\src\\React\\ClientApp\\components\\contacts\\contact.ts"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(2)(module)))
 
 /***/ }),

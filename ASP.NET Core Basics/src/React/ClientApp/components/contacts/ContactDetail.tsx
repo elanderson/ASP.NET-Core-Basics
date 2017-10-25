@@ -7,7 +7,13 @@ import { ContactService } from './contactService';
 
 interface ContactDetailState {
     id: string;
-    contact: Contact;
+    name: string;
+    address: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    phone: string;
+    email: string;
     loading: boolean;
 }
 
@@ -18,15 +24,32 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
 
 
         if (props.match.params.id == undefined) {
-            this.state = { id: props.match.params.id, contact: new Contact(), loading: false };
+            this.state = {
+                id: props.match.params.id,
+                name: '', address: '', city: '',
+                state: '', postalCode: '', phone: '',
+                email: '',
+                loading: false
+            };
         }
         else {
-            this.state = { id: props.match.params.id, contact: new Contact(), loading: true };
+            this.state = {
+                id: props.match.params.id,
+                name: '', address: '', city: '',
+                state: '', postalCode: '', phone: '',
+                email: '',
+                loading: true
+            };
 
             let contactService = new ContactService();
             contactService.getById(this.state.id)
                 .then(data => {
-                    this.setState({ contact: data, loading: false });
+                    this.setState({
+                        name: data.name, address: data.address, city: data.city,
+                        state: data.state, postalCode: data.postalCode, phone: data.phone,
+                        email: data.email,
+                        loading: false
+                    });
                 });
         }
     }
@@ -35,7 +58,7 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
             : this.state.id != undefined
-                ? ContactDetail.renderExistingContact(this.state.contact)
+                ? this.renderExistingContact()
                 : this.renderNewContact();
 
         return <div>
@@ -47,23 +70,34 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
         </div>;
     }
 
-    private static renderExistingContact(contact: Contact) {
+    private renderExistingContact() {
         return <dl className="dl-horizontal">
             <dt>ID</dt>
-            <dd>{contact.id}</dd>
+            <dd>{this.state.id}</dd>
             <dt>Name</dt>
-            <dd>{contact.name}</dd>
+            <dd>{this.state.name}</dd>
             <dt>Address</dt>
-            <dd>{contact.getAddress()}</dd>
+            <dd>{this.state.address} {this.state.city}, {this.state.state} {this.state.postalCode}</dd>
             <dt>Phone</dt>
-            <dd>{contact.phone}</dd>
+            <dd>{this.state.phone}</dd>
             <dt>Email</dt>
-            <dd>{contact.email}</dd>
+            <dd>{this.state.email}</dd>
         </dl>;
     }
 
+    private handleChange(event: any): void {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({[name]: value});
+    }
+
     private reset() {
-        this.setState({ contact: new Contact() });
+        this.setState({
+            name: '', address: '', city: '',
+            state: '', postalCode: '', phone: '',
+            email: '' });
     }
 
     private renderNewContact() {
@@ -73,43 +107,43 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Name</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="name" className="form-control" value={this.state.contact.name} />
+                            <input type="text" placeholder="name" className="form-control" name="name" value={this.state.name} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Address</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="address" className="form-control" value={this.state.contact.address} />
+                            <input type="text" placeholder="address" className="form-control" name="address" value={this.state.address} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">City</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="city" className="form-control" value={this.state.contact.city} />
+                            <input type="text" placeholder="city" className="form-control" name="city" value={this.state.city} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">State</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="state" className="form-control" value={this.state.contact.state} />
+                            <input type="text" placeholder="state" className="form-control" name="state" value={this.state.state} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Zip</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="zip" className="form-control" value={this.state.contact.postalCode} />
+                            <input type="text" placeholder="zip" className="form-control" name="postalCode" value={this.state.postalCode} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Phone</label>
                         <div className="col-sm-10">
-                            <input type="text" placeholder="phone" className="form-control" value={this.state.contact.phone} />
+                            <input type="text" placeholder="phone" className="form-control" name="phone" value={this.state.phone} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Email</label>
                         <div className="col-sm-10">
-                            <input type="email" placeholder="email" className="form-control" value={this.state.contact.email} />
+                            <input type="email" placeholder="email" className="form-control" name="email" value={this.state.email} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
                 </form>
