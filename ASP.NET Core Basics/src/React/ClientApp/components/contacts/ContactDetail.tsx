@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+import { RouteComponentProps, Redirect  } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import 'isomorphic-fetch';
 import { Contact } from './contact';
@@ -15,6 +15,7 @@ interface ContactDetailState {
     phone: string;
     email: string;
     loading: boolean;
+    redirect: boolean;
 }
 
 export class ContactDetail extends React.Component<RouteComponentProps<{}>, ContactDetailState> {
@@ -29,7 +30,8 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
                 name: '', address: '', city: '',
                 state: '', postalCode: '', phone: '',
                 email: '',
-                loading: false
+                loading: false,
+                redirect: false
             };
         }
         else {
@@ -38,7 +40,8 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
                 name: '', address: '', city: '',
                 state: '', postalCode: '', phone: '',
                 email: '',
-                loading: true
+                loading: true,
+                redirect: false
             };
 
             let contactService = new ContactService();
@@ -57,7 +60,8 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
     public render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : this.state.id != undefined
+            : this.state.id != undefined &&
+              !this.state.redirect
                 ? this.renderExistingContact()
                 : this.renderNewContact();
 
@@ -90,20 +94,44 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
         const value = target.value;
         const name = target.name;
 
-        this.setState({[name]: value});
+        this.setState({ [name]: value });
+    }
+
+    handleSubmit(event: any): void {
+        event.preventDefault();
+
+        let contact = new Contact();
+        contact.name = this.state.name;
+        contact.address = this.state.address;
+        contact.city = this.state.city;
+        contact.state = this.state.state;
+        contact.postalCode = this.state.postalCode;
+        contact.phone = this.state.phone;
+        contact.email = this.state.email;
+
+        let contactService = new ContactService();
+        contactService.save(contact)
+            .then(c => this.setState({ id: String(c.id) }));
+
+        if (this.state.id) {
+            
+        }
+
     }
 
     private reset() {
         this.setState({
             name: '', address: '', city: '',
             state: '', postalCode: '', phone: '',
-            email: '' });
+            email: ''
+        });
     }
 
     private renderNewContact() {
         return (
             <div>
-                <form role="form" className="form-horizontal">
+                {this.state.redirect && <Redirect to={`/contactdetail/${this.state.id}`}/>}
+                <form role="form" className="form-horizontal" onSubmit={(e: any) => this.handleSubmit(e)}>
                     <div className="form-group">
                         <label className="col-sm-2 control-label">Name</label>
                         <div className="col-sm-10">
@@ -146,11 +174,11 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
                             <input type="email" placeholder="email" className="form-control" name="email" value={this.state.email} onChange={(e: any) => this.handleChange(e)} />
                         </div>
                     </div>
+                    <div className="text-center">
+                        <button className="btn btn-success btn-lg" type="submit">Save</button>
+                        <button className="btn btn-danger btn-lg" onClick={() => this.reset()}>Reset</button>
+                    </div >
                 </form>
-                <div className="text-center">
-                    <button className="btn btn-success btn-lg" type="submit">Save</button>
-                    <button className="btn btn-danger btn-lg" onClick={() => this.reset()}>Reset</button>
-                </div >
             </div>
         );
     }
