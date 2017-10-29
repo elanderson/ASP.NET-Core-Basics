@@ -17,4 +17,18 @@ export class ContactService {
             .then(contact => new Contact(contact));
     }
 
+    save(contact: Contact): Promise<Contact> {
+        return fetch(this.baseUrl,
+                {
+                    method: 'post',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify(contact)
+                })
+            .then(response => response.json())
+            .then(contact => new Contact(contact));
+    }
+
 }
