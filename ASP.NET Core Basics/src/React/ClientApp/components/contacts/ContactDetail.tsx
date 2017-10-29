@@ -113,6 +113,10 @@ export class ContactDetail extends React.Component<RouteComponentProps<{}>, Cont
         contactService.save(contact)
             .then(c => this.setState({ id: String(c.id) }));
 
+        if (this.state.id) {
+            this.setState({ redirect: true });
+        }
+
     }
 
     private reset() {
