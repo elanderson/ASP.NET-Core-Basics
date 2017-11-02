@@ -1,0 +1,23 @@
+﻿<template>
+    <div>
+        <h1>Contact List</h1>
+        <table v-if="contacts.length" class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="contact in contacts">
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.name }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+
+<script src="./contactlist.ts"></script>
