@@ -3,16 +3,16 @@
         <h1>Contact List</h1>
         <table v-if="contacts.length" class="table">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
             </thead>
             <tbody>
-            <tr v-for="contact in contacts">
-                <td>{{ contact.id }}</td>
-                <td>{{ contact.name }}</td>
-            </tr>
+                <tr v-for="contact in contacts">
+                    <td><router-link v-bind:to="'contactdetail/' + contact.id">{{ contact.id }}</router-link></td>
+                    <td>{{ contact.name }}</td>
+                </tr>
             </tbody>
         </table>
 

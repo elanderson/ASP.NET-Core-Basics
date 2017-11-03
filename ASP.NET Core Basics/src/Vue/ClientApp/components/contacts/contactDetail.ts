@@ -4,14 +4,14 @@ import { Contact } from './contact';
 import { ContactService } from './contactService';
 
 @Component
-export default class ContactListComponent extends Vue {
-    contacts: Contact[] = [];
+export default class ContactDetailComponent extends Vue {
+    contact: Contact;
 
     mounted() {
         let contactService = new ContactService();
-        contactService.getAll()
+        contactService.getById(this.$props.id)
             .then(data => {
-                this.contacts = data;
+                this.contact = data;
             });
     }
 }
