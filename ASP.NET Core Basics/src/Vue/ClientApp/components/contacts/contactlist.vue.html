@@ -10,7 +10,7 @@
             </thead>
             <tbody>
                 <tr v-for="contact in contacts">
-                    <td><router-link v-bind:to="'contactdetail/' + contact.id">{{ contact.id }}</router-link></td>
+                    <td><router-link :to="'/contactdetail/' +  contact.id">{{ contact.id }}</router-link></td>
                     <td>{{ contact.name }}</td>
                 </tr>
             </tbody>

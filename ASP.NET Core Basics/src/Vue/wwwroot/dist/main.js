@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "05d2041ee3d699e7f2e6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "66e560f00aa0ba96d8f1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1898,7 +1898,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_property_decorator__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_property_decorator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_property_decorator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contactService__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contactService__ = __webpack_require__(7);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1918,21 +1919,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var ContactDetailComponent = (function (_super) {
     __extends(ContactDetailComponent, _super);
     function ContactDetailComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.contact = new __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* Contact */]();
+        return _this;
     }
     ContactDetailComponent.prototype.mounted = function () {
         var _this = this;
-        var contactService = new __WEBPACK_IMPORTED_MODULE_2__contactService__["a" /* ContactService */]();
-        contactService.getById(this.$props.id)
+        var contactService = new __WEBPACK_IMPORTED_MODULE_3__contactService__["a" /* ContactService */]();
+        contactService.getById(this.id)
             .then(function (data) {
             _this.contact = data;
         });
     };
     return ContactDetailComponent;
 }(__WEBPACK_IMPORTED_MODULE_0_vue__["default"]));
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vue_property_decorator__["Prop"])()
+], ContactDetailComponent.prototype, "id", void 0);
 ContactDetailComponent = __decorate([
     __WEBPACK_IMPORTED_MODULE_1_vue_property_decorator__["Component"]
 ], ContactDetailComponent);
@@ -4812,7 +4819,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.contacts), function(contact) {
     return _c('tr', [_c('td', [_c('router-link', {
       attrs: {
-        "to": 'contactdetail/' + contact.id
+        "to": '/contactdetail/' + contact.id
       }
     }, [_vm._v(_vm._s(contact.id))])], 1), _vm._v(" "), _c('td', [_vm._v(_vm._s(contact.name))])])
   }))]) : _c('p', [_c('em', [_vm._v("Loading...")])])])
