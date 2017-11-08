@@ -1,26 +1,17 @@
 ﻿import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import { Contact } from './contact';
+import { ContactService } from './contactService';
 
 @Component
 export default class ContactListComponent extends Vue {
     contacts: Contact[] = [];
 
     mounted() {
-        fetch('http://localhost:13322/api/contactsApi/')
-            .then(response => response.json() as Promise<Contact[]>)
+        let contactService = new ContactService();
+        contactService.getAll()
             .then(data => {
                 this.contacts = data;
             });
     }
-}
-
-interface Contact {
-    id: number;
-    name: string;
-    address: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    phone: string;
-    email: string;
 }
