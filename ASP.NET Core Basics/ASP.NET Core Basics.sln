@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6446DEF2-D423-47E2-85CC-691A52915EC2}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "React", "src\React\React.csproj", "{56EC1AA3-0060-4349-921F-59AAB8A93129}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vue", "src\Vue\Vue.csproj", "{9C278842-E287-488D-B76B-D3096AF553D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularWithCli", "src\AngularWithCli\AngularWithCli.csproj", "{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,18 @@ Global
 		{9C278842-E287-488D-B76B-D3096AF553D4}.Release|x64.Build.0 = Release|Any CPU
 		{9C278842-E287-488D-B76B-D3096AF553D4}.Release|x86.ActiveCfg = Release|Any CPU
 		{9C278842-E287-488D-B76B-D3096AF553D4}.Release|x86.Build.0 = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|x64.Build.0 = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Debug|x86.Build.0 = Debug|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|x64.ActiveCfg = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|x64.Build.0 = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +110,7 @@ Global
 		{F27EF346-050A-4AC6-BCAA-D2446246240C} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
 		{56EC1AA3-0060-4349-921F-59AAB8A93129} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
 		{9C278842-E287-488D-B76B-D3096AF553D4} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
+		{FDA0C05E-3874-46BF-A490-7DEBDCA930A3} = {6446DEF2-D423-47E2-85CC-691A52915EC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {810FF428-282C-444B-9C2A-660B9AAE9D8F}
