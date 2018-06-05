@@ -8,6 +8,7 @@ using Contacts.Data;
 using Contacts.Models;
 using Contacts.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Contacts
@@ -57,6 +58,8 @@ namespace Contacts
             {
                 c.SwaggerDoc("v1", new Info { Title = "Contacts API", Version = "v1"});
             });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +72,6 @@ namespace Contacts
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-                app.UseBrowserLink();
             }
             else
             {
