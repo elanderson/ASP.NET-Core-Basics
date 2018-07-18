@@ -1,0 +1,50 @@
+﻿@page "/contacts"
+@inject HttpClient Http
+
+<h1>Contact List</h1>
+
+@if (contacts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in contacts)
+            {
+                <tr>
+                    <td>@contact.Id</td>
+                    <td>@contact.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Contact[] contacts;
+
+    protected override async Task OnInitAsync()
+    {
+        contacts = await Http.GetJsonAsync<Contact[]>("http://localhost:13322/api/contactsApi/");
+    }
+
+    class Contact
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string PostalCode { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+    }
+}
