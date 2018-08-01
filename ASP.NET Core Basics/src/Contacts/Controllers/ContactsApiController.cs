@@ -32,7 +32,7 @@ namespace Contacts.Controllers
         [ProducesResponseType(typeof(Contact), 200)]
         [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
         [ProducesResponseType(typeof(void), 404)]
-        public async Task<IActionResult> GetContact([FromRoute] int id)
+        public async Task<ActionResult<Contact>> GetContact([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace Contacts.Controllers
                 return NotFound();
             }
 
-            return Ok(contact);
+            return contact;
         }
 
         // PUT: api/ContactsApi/5
@@ -56,7 +56,7 @@ namespace Contacts.Controllers
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 404)]
         [ProducesResponseType(typeof(void), 204)]
-        public async Task<IActionResult> PutContact([FromRoute] int id, [FromBody] Contact contact)
+        public async Task<ActionResult<Contact>> PutContact([FromRoute] int id, [FromBody] Contact contact)
         {
             if (!ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace Contacts.Controllers
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 404)]
         [ProducesResponseType(typeof(void), 409)]
-        public async Task<IActionResult> PostContact([FromBody] Contact contact)
+        public async Task<ActionResult<Contact>> PostContact([FromBody] Contact contact)
         {
             if (!ModelState.IsValid)
             {
@@ -124,7 +124,7 @@ namespace Contacts.Controllers
         [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 404)]
-        public async Task<IActionResult> DeleteContact([FromRoute] int id)
+        public async Task<ActionResult<Contact>> DeleteContact([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
@@ -140,7 +140,7 @@ namespace Contacts.Controllers
             _context.Contact.Remove(contact);
             await _context.SaveChangesAsync();
 
-            return Ok(contact);
+            return contact;
         }
 
         private bool ContactExists(int id)
