@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b5ee3bcd0421c2550d30"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4699ba700109a5e52588"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -825,7 +825,7 @@ function reset() {
 
 "use strict";
 /* unused harmony export animationEvent */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return Animator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Animator; });
 /* unused harmony export CompositionTransactionNotifier */
 /* unused harmony export CompositionTransactionOwnershipToken */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return CompositionTransaction; });
@@ -836,24 +836,24 @@ function reset() {
 /* unused harmony export ElementEvents */
 /* unused harmony export ResourceLoadContext */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ViewCompileInstruction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return BehaviorInstruction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return TargetInstruction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return BehaviorInstruction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return TargetInstruction; });
 /* unused harmony export viewStrategy */
 /* unused harmony export RelativeViewStrategy */
 /* unused harmony export ConventionalViewStrategy */
 /* unused harmony export NoViewStrategy */
 /* unused harmony export TemplateRegistryViewStrategy */
 /* unused harmony export InlineViewStrategy */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return ViewLocator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ViewLocator; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BindingLanguage; });
 /* unused harmony export SlotCustomAttribute */
 /* unused harmony export PassThroughSlot */
 /* unused harmony export ShadowSlot */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return ShadowDOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return ShadowDOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewResources; });
 /* unused harmony export View */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ViewSlot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return BoundViewFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return BoundViewFactory; });
 /* unused harmony export ViewFactory */
 /* unused harmony export ViewCompiler */
 /* unused harmony export ResourceModule */
@@ -866,24 +866,24 @@ function reset() {
 /* unused harmony export HtmlBehaviorResource */
 /* unused harmony export children */
 /* unused harmony export child */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SwapStrategies; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CompositionEngine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SwapStrategies; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return CompositionEngine; });
 /* unused harmony export ElementConfigResource */
-/* harmony export (immutable) */ __webpack_exports__["p"] = resource;
+/* harmony export (immutable) */ __webpack_exports__["q"] = resource;
 /* unused harmony export behavior */
-/* harmony export (immutable) */ __webpack_exports__["g"] = customElement;
-/* harmony export (immutable) */ __webpack_exports__["k"] = customAttribute;
-/* harmony export (immutable) */ __webpack_exports__["m"] = templateController;
-/* harmony export (immutable) */ __webpack_exports__["j"] = bindable;
+/* harmony export (immutable) */ __webpack_exports__["i"] = customElement;
+/* harmony export (immutable) */ __webpack_exports__["g"] = customAttribute;
+/* harmony export (immutable) */ __webpack_exports__["s"] = templateController;
+/* harmony export (immutable) */ __webpack_exports__["h"] = bindable;
 /* unused harmony export dynamicOptions */
 /* unused harmony export useShadowDOM */
 /* unused harmony export processAttributes */
 /* unused harmony export processContent */
 /* unused harmony export containerless */
 /* unused harmony export useViewStrategy */
-/* harmony export (immutable) */ __webpack_exports__["q"] = useView;
+/* harmony export (immutable) */ __webpack_exports__["p"] = useView;
 /* unused harmony export inlineView */
-/* harmony export (immutable) */ __webpack_exports__["i"] = noView;
+/* harmony export (immutable) */ __webpack_exports__["l"] = noView;
 /* unused harmony export elementConfig */
 /* unused harmony export viewResources */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TemplatingEngine; });
@@ -2284,7 +2284,7 @@ var View = function () {
 
     this.isBound = true;
     this.bindingContext = bindingContext;
-    this.overrideContext = overrideContext || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["b" /* createOverrideContext */])(bindingContext);
+    this.overrideContext = overrideContext || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["a" /* createOverrideContext */])(bindingContext);
 
     this.resources._invokeHook('beforeBind', this);
 
@@ -3932,7 +3932,7 @@ var ModuleAnalyzer = function () {
           }
 
           __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["a" /* metadata */].define(__WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["a" /* metadata */].resource, conventional, exportedValue);
-        } else if (conventional = __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["c" /* ValueConverterResource */].convention(key) || __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["d" /* BindingBehaviorResource */].convention(key) || ViewEngineHooksResource.convention(key)) {
+        } else if (conventional = __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["b" /* ValueConverterResource */].convention(key) || __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["c" /* BindingBehaviorResource */].convention(key) || ViewEngineHooksResource.convention(key)) {
           resources.push(new ResourceDescription(key, exportedValue, conventional));
           __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["a" /* metadata */].define(__WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["a" /* metadata */].resource, conventional, exportedValue);
         } else if (!fallbackValue) {
@@ -4226,7 +4226,7 @@ var Controller = function () {
 
   Controller.prototype.automate = function automate(overrideContext, owningView) {
     this.view.bindingContext = this.viewModel;
-    this.view.overrideContext = overrideContext || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["b" /* createOverrideContext */])(this.viewModel);
+    this.view.overrideContext = overrideContext || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["a" /* createOverrideContext */])(this.viewModel);
     this.view._isUserControlled = true;
 
     if (this.behavior.handlesCreated) {
@@ -4282,9 +4282,9 @@ var Controller = function () {
       if (this.viewModel === scope.overrideContext.bindingContext) {
         overrideContext = scope.overrideContext;
       } else if (this.instruction.inheritBindingContext) {
-        overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["b" /* createOverrideContext */])(this.viewModel, scope.overrideContext);
+        overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["a" /* createOverrideContext */])(this.viewModel, scope.overrideContext);
       } else {
-        overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["b" /* createOverrideContext */])(this.viewModel);
+        overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["a" /* createOverrideContext */])(this.viewModel);
         overrideContext.__parentOverrideContext = scope.overrideContext;
       }
 
@@ -4360,7 +4360,7 @@ var Controller = function () {
   return Controller;
 }();
 
-var BehaviorPropertyObserver = (_dec9 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["e" /* subscriberCollection */])(), _dec9(_class16 = function () {
+var BehaviorPropertyObserver = (_dec9 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["d" /* subscriberCollection */])(), _dec9(_class16 = function () {
   function BehaviorPropertyObserver(taskQueue, obj, propertyName, selfSubscriber, initialValue) {
     
 
@@ -4451,7 +4451,7 @@ var BindableProperty = function () {
 
     this.attribute = this.attribute || _hyphenate(this.name);
     if (this.defaultBindingMode === null || this.defaultBindingMode === undefined) {
-      this.defaultBindingMode = __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["f" /* bindingMode */].oneWay;
+      this.defaultBindingMode = __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["e" /* bindingMode */].oneWay;
     }
     this.changeHandler = this.changeHandler || null;
     this.owner = null;
@@ -4718,7 +4718,7 @@ var HtmlBehaviorResource = function () {
     this.isInitialized = true;
     target.__providerId__ = nextProviderId();
 
-    this.observerLocator = container.get(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["g" /* ObserverLocator */]);
+    this.observerLocator = container.get(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["f" /* ObserverLocator */]);
     this.taskQueue = container.get(__WEBPACK_IMPORTED_MODULE_7_aurelia_task_queue__["a" /* TaskQueue */]);
 
     this.target = target;
@@ -5461,7 +5461,7 @@ var ElementConfigResource = function () {
 
   ElementConfigResource.prototype.load = function load(container, target) {
     var config = new target();
-    var eventManager = container.get(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["h" /* EventManager */]);
+    var eventManager = container.get(__WEBPACK_IMPORTED_MODULE_6_aurelia_binding__["g" /* EventManager */]);
     eventManager.registerElementConfig(config);
   };
 
@@ -9301,7 +9301,7 @@ var ArrayRepeatStrategy = function () {
             removed = _splices$i.removed,
             addedCount = _splices$i.addedCount;
 
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["l" /* mergeSplice */])(repeat.__queuedSplices, index, removed, addedCount);
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["m" /* mergeSplice */])(repeat.__queuedSplices, index, removed, addedCount);
       }
 
       repeat.__array = array.slice(0);
@@ -10196,7 +10196,7 @@ var BindingSignaler = function () {
     }
     var i = bindings.length;
     while (i--) {
-      bindings[i].call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
+      bindings[i].call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* sourceContext */]);
     }
   };
 
@@ -10913,24 +10913,24 @@ var Contact = (function () {
 /* unused harmony export getMapObserver */
 /* unused harmony export getSetObserver */
 /* harmony export (immutable) */ __webpack_exports__["n"] = camelCase;
-/* harmony export (immutable) */ __webpack_exports__["b"] = createOverrideContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = createOverrideContext;
 /* unused harmony export getContextFor */
 /* unused harmony export createScopeForTest */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return sourceContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return sourceContext; });
 /* harmony export (immutable) */ __webpack_exports__["p"] = connectable;
 /* harmony export (immutable) */ __webpack_exports__["q"] = enqueueBindingConnect;
-/* harmony export (immutable) */ __webpack_exports__["e"] = subscriberCollection;
+/* harmony export (immutable) */ __webpack_exports__["d"] = subscriberCollection;
 /* unused harmony export ExpressionObserver */
 /* unused harmony export calcSplices */
-/* harmony export (immutable) */ __webpack_exports__["l"] = mergeSplice;
+/* harmony export (immutable) */ __webpack_exports__["m"] = mergeSplice;
 /* unused harmony export projectArraySplices */
 /* unused harmony export getChangeRecords */
 /* unused harmony export ModifyCollectionObserver */
 /* unused harmony export CollectionLengthObserver */
 /* unused harmony export Expression */
 /* unused harmony export Chain */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BindingBehavior; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ValueConverter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return BindingBehavior; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ValueConverter; });
 /* unused harmony export Assign */
 /* unused harmony export Conditional */
 /* unused harmony export AccessThis */
@@ -10949,14 +10949,14 @@ var Contact = (function () {
 /* unused harmony export Unparser */
 /* unused harmony export ExpressionCloner */
 /* unused harmony export cloneExpression */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return bindingMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return bindingMode; });
 /* unused harmony export Token */
 /* unused harmony export Lexer */
 /* unused harmony export Scanner */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Parser; });
 /* unused harmony export ParserImplementation */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return delegationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return EventManager; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return EventManager; });
 /* unused harmony export DirtyChecker */
 /* unused harmony export DirtyCheckProperty */
 /* unused harmony export propertyAccessor */
@@ -10964,7 +10964,7 @@ var Contact = (function () {
 /* unused harmony export SetterObserver */
 /* unused harmony export XLinkAttributeObserver */
 /* unused harmony export dataAttributeAccessor */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataAttributeObserver; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return DataAttributeObserver; });
 /* unused harmony export StyleObserver */
 /* unused harmony export ValueAttributeObserver */
 /* unused harmony export CheckedObserver */
@@ -10979,15 +10979,15 @@ var Contact = (function () {
 /* unused harmony export presentationElements */
 /* unused harmony export presentationAttributes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SVGAnalyzer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return ObserverLocator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ObserverLocator; });
 /* unused harmony export ObjectObservationAdapter */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return BindingExpression; });
 /* unused harmony export Binding */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return CallExpression; });
 /* unused harmony export Call */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ValueConverterResource; });
-/* harmony export (immutable) */ __webpack_exports__["m"] = valueConverter;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BindingBehaviorResource; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ValueConverterResource; });
+/* harmony export (immutable) */ __webpack_exports__["j"] = valueConverter;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BindingBehaviorResource; });
 /* unused harmony export bindingBehavior */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return ListenerExpression; });
 /* unused harmony export Listener */
@@ -17577,7 +17577,7 @@ function _createCSSResource(address) {
         return ViewCSS;
     }(CSSViewEngineHooks));
     ViewCSS = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["p" /* resource */])(new CSSResource(address))
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["q" /* resource */])(new CSSResource(address))
     ], ViewCSS);
     return ViewCSS;
 }
@@ -17597,7 +17597,7 @@ function _createCSSResource(address) {
 
 function recreateView(viewFactory, oldViewContainer) {
     var parentContainer = oldViewContainer.parent || oldViewContainer;
-    var targetInstruction = oldViewContainer.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["n" /* TargetInstruction */]);
+    var targetInstruction = oldViewContainer.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["u" /* TargetInstruction */]);
     // const targetInstruction = container.get(TargetInstruction) as TargetInstruction;
     var factoryCreateInstruction = targetInstruction.elementInstruction || { partReplacements: null };
     // let factoryCreateInstruction = ({partReplacements: null} as BehaviorInstruction);
@@ -18884,7 +18884,7 @@ var CSSViewEngineHooks = function () {
 function _createCSSResource(address) {
   var _dec, _class;
 
-  var ViewCSS = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["p" /* resource */])(new CSSResource(address)), _dec(_class = function (_CSSViewEngineHooks) {
+  var ViewCSS = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["q" /* resource */])(new CSSResource(address)), _dec(_class = function (_CSSViewEngineHooks) {
     _inherits(ViewCSS, _CSSViewEngineHooks);
 
     function ViewCSS() {
@@ -18913,7 +18913,7 @@ function _createCSSResource(address) {
 function _createDynamicElement(name, viewUrl, bindableNames) {
   var _dec, _dec2, _class;
 
-  var DynamicElement = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["g" /* customElement */])(name), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["q" /* useView */])(viewUrl), _dec(_class = _dec2(_class = function () {
+  var DynamicElement = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["i" /* customElement */])(name), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["p" /* useView */])(viewUrl), _dec(_class = _dec2(_class = function () {
     function DynamicElement() {
       
     }
@@ -18926,7 +18926,7 @@ function _createDynamicElement(name, viewUrl, bindableNames) {
   }()) || _class) || _class);
 
   for (var i = 0, ii = bindableNames.length; i < ii; ++i) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["j" /* bindable */])(bindableNames[i])(DynamicElement);
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["h" /* bindable */])(bindableNames[i])(DynamicElement);
   }
   return DynamicElement;
 }
@@ -19004,7 +19004,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var TemplatingRouteLoader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["h" /* CompositionEngine */]), _dec(_class = function (_RouteLoader) {
+var TemplatingRouteLoader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["k" /* CompositionEngine */]), _dec(_class = function (_RouteLoader) {
   _inherits(TemplatingRouteLoader, _RouteLoader);
 
   function TemplatingRouteLoader(compositionEngine) {
@@ -19051,7 +19051,7 @@ function createDynamicClass(moduleId) {
 
   var name = /([^\/^\?]+)\.html/i.exec(moduleId)[1];
 
-  var DynamicClass = (_dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customElement */])(name), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["q" /* useView */])(moduleId), _dec2(_class2 = _dec3(_class2 = function () {
+  var DynamicClass = (_dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["i" /* customElement */])(name), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["p" /* useView */])(moduleId), _dec2(_class2 = _dec3(_class2 = function () {
     function DynamicClass() {
       
     }
@@ -20872,7 +20872,7 @@ var Loader = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
 
 
-var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
+var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].oneTime;
 
 function updateOverrideContexts(views, startIndex) {
   var length = views.length;
@@ -20888,7 +20888,7 @@ function updateOverrideContexts(views, startIndex) {
 
 function createFullOverrideContext(repeat, data, index, length, key) {
   var bindingContext = {};
-  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["b" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
+  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["a" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
 
   if (typeof key !== 'undefined') {
     bindingContext[repeat.key] = key;
@@ -20921,10 +20921,10 @@ function getItemsSourceExpression(instruction, attrName) {
 
 function unwrapExpression(expression) {
   var unwrapped = false;
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* BindingBehavior */]) {
     expression = expression.expression;
   }
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["l" /* ValueConverter */]) {
     expression = expression.expression;
     unwrapped = true;
   }
@@ -20932,7 +20932,7 @@ function unwrapExpression(expression) {
 }
 
 function isOneTime(expression) {
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* BindingBehavior */]) {
     if (expression.name === 'oneTime') {
       return true;
     }
@@ -20943,7 +20943,7 @@ function isOneTime(expression) {
 
 function updateOneTimeBinding(binding) {
   if (binding.call && binding.mode === oneTime) {
-    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
+    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* sourceContext */]);
   } else if (binding.updateOneTimeBindings) {
     binding.updateOneTimeBindings();
   }
@@ -23138,7 +23138,7 @@ var InterpolationBinding = function () {
   InterpolationBinding.prototype.updateOneTimeBindings = function updateOneTimeBindings() {
     for (var i = 1, ii = this.parts.length; i < ii; i += 2) {
       var child = this['childBinding' + i];
-      if (child.mode === __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneTime) {
+      if (child.mode === __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneTime) {
         child.call();
       }
     }
@@ -23220,7 +23220,7 @@ var ChildInterpolationBinding = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED
     this.rawValue = this.sourceExpression.evaluate(this.source, this.lookupFunctions);
     this.updateTarget(this.rawValue);
 
-    if (this.mode !== __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneTime) {
+    if (this.mode !== __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneTime) {
       this._version++;
       this.sourceExpression.connect(this, this.source);
       if (this.rawValue instanceof Array) {
@@ -23248,7 +23248,7 @@ var ChildInterpolationBinding = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED
     this.rawValue = sourceExpression.evaluate(source, this.lookupFunctions);
     this.updateTarget(this.rawValue);
 
-    if (this.mode === __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay) {
+    if (this.mode === __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay) {
       __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["q" /* enqueueBindingConnect */])(this);
     }
   };
@@ -23312,18 +23312,18 @@ var SyntaxInterpreter = (_temp2 = _class3 = function () {
     var tagName = element.tagName.toLowerCase();
 
     if (tagName === 'input' && (attrName === 'value' || attrName === 'files') && element.type !== 'checkbox' && element.type !== 'radio' || tagName === 'input' && attrName === 'checked' && (element.type === 'checkbox' || element.type === 'radio') || (tagName === 'textarea' || tagName === 'select') && attrName === 'value' || (attrName === 'textcontent' || attrName === 'innerhtml') && element.contentEditable === 'true' || attrName === 'scrolltop' || attrName === 'scrollleft') {
-      return __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].twoWay;
+      return __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].twoWay;
     }
 
-    if (context && attrName in context.attributes && context.attributes[attrName] && context.attributes[attrName].defaultBindingMode >= __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneTime) {
+    if (context && attrName in context.attributes && context.attributes[attrName] && context.attributes[attrName].defaultBindingMode >= __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneTime) {
       return context.attributes[attrName].defaultBindingMode;
     }
 
-    return __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay;
+    return __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay;
   };
 
   SyntaxInterpreter.prototype.bind = function bind(resources, element, info, existingInstruction, context) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
     instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), info.defaultBindingMode || this.determineDefaultBindingMode(element, info.attrName, context), resources.lookupFunctions);
 
@@ -23343,7 +23343,7 @@ var SyntaxInterpreter = (_temp2 = _class3 = function () {
   };
 
   SyntaxInterpreter.prototype.call = function call(resources, element, info, existingInstruction) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
     instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["u" /* CallExpression */](this.observerLocator, info.attrName, this.parser.parse(info.attrValue), resources.lookupFunctions);
 
@@ -23351,7 +23351,7 @@ var SyntaxInterpreter = (_temp2 = _class3 = function () {
   };
 
   SyntaxInterpreter.prototype.options = function options(resources, element, info, existingInstruction, context) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
     var attrValue = info.attrValue;
     var language = this.language;
     var name = null;
@@ -23437,7 +23437,7 @@ var SyntaxInterpreter = (_temp2 = _class3 = function () {
       throw new Error('Incorrect syntax for "for". The form is: "$local of $items" or "[$key, $value] of $items".');
     }
 
-    instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
     if (isDestructuring) {
       keyValue = parts[0].replace(/[[\]]/g, '').replace(/,/g, ' ').replace(/\s+/g, ' ').trim().split(' ');
@@ -23447,37 +23447,37 @@ var SyntaxInterpreter = (_temp2 = _class3 = function () {
       instruction.attributes.local = parts[0];
     }
 
-    instruction.attributes.items = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, 'items', this.parser.parse(parts[1]), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay, resources.lookupFunctions);
+    instruction.attributes.items = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, 'items', this.parser.parse(parts[1]), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay, resources.lookupFunctions);
 
     return instruction;
   };
 
   SyntaxInterpreter.prototype['two-way'] = function twoWay(resources, element, info, existingInstruction) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
-    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].twoWay, resources.lookupFunctions);
+    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].twoWay, resources.lookupFunctions);
 
     return instruction;
   };
 
   SyntaxInterpreter.prototype['one-way'] = function oneWay(resources, element, info, existingInstruction) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
-    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay, resources.lookupFunctions);
+    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay, resources.lookupFunctions);
 
     return instruction;
   };
 
   SyntaxInterpreter.prototype['one-time'] = function oneTime(resources, element, info, existingInstruction) {
-    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(info.attrName);
+    var instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(info.attrName);
 
-    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneTime, resources.lookupFunctions);
+    instruction.attributes[info.attrName] = new __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["r" /* BindingExpression */](this.observerLocator, this.attributeMap.map(element.tagName, info.attrName), this.parser.parse(info.attrValue), __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneTime, resources.lookupFunctions);
 
     return instruction;
   };
 
   return SyntaxInterpreter;
-}(), _class3.inject = [__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["v" /* Parser */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["g" /* ObserverLocator */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["h" /* EventManager */], AttributeMap], _temp2);
+}(), _class3.inject = [__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["v" /* Parser */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* ObserverLocator */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["g" /* EventManager */], AttributeMap], _temp2);
 
 var info = {};
 
@@ -23528,7 +23528,7 @@ var TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) 
       if (interpolationParts === null) {
         info.expression = null;
       } else {
-        info.expression = new InterpolationBindingExpression(this.observerLocator, this.attributeMap.map(elementName, attrName), interpolationParts, __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay, resources.lookupFunctions, attrName);
+        info.expression = new InterpolationBindingExpression(this.observerLocator, this.attributeMap.map(elementName, attrName), interpolationParts, __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay, resources.lookupFunctions, attrName);
       }
     }
 
@@ -23543,7 +23543,7 @@ var TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) 
         return theInfo.expression;
       }
 
-      instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].attribute(theInfo.attrName);
+      instruction = existingInstruction || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].attribute(theInfo.attrName);
       instruction.attributes[theInfo.attrName] = theInfo.expression;
     } else if (theInfo.command) {
       instruction = this.syntaxInterpreter.interpret(resources, element, theInfo, existingInstruction, context);
@@ -23557,7 +23557,7 @@ var TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) 
     if (parts === null) {
       return null;
     }
-    return new InterpolationBindingExpression(this.observerLocator, 'textContent', parts, __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].oneWay, resources.lookupFunctions, 'textContent');
+    return new InterpolationBindingExpression(this.observerLocator, 'textContent', parts, __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].oneWay, resources.lookupFunctions, 'textContent');
   };
 
   TemplatingBindingLanguage.prototype.parseInterpolation = function parseInterpolation(resources, value) {
@@ -23634,7 +23634,7 @@ var TemplatingBindingLanguage = (_temp3 = _class4 = function (_BindingLanguage) 
   };
 
   return TemplatingBindingLanguage;
-}(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["b" /* BindingLanguage */]), _class4.inject = [__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["v" /* Parser */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["g" /* ObserverLocator */], SyntaxInterpreter, AttributeMap], _temp3);
+}(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["b" /* BindingLanguage */]), _class4.inject = [__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["v" /* Parser */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* ObserverLocator */], SyntaxInterpreter, AttributeMap], _temp3);
 
 function configure(config) {
   config.container.registerSingleton(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["b" /* BindingLanguage */], TemplatingBindingLanguage);
@@ -23788,7 +23788,7 @@ var AttrBindingBehavior = function () {
   }
 
   AttrBindingBehavior.prototype.bind = function bind(binding, source) {
-    binding.targetObserver = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["a" /* DataAttributeObserver */](binding.target, binding.targetProperty);
+    binding.targetObserver = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["h" /* DataAttributeObserver */](binding.target, binding.targetProperty);
   };
 
   AttrBindingBehavior.prototype.unbind = function unbind(binding, source) {};
@@ -23829,19 +23829,19 @@ var modeBindingBehavior = {
 var OneTimeBindingBehavior = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["d" /* mixin */])(modeBindingBehavior), _dec(_class = function OneTimeBindingBehavior() {
   
 
-  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
+  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].oneTime;
 }) || _class);
 
 var OneWayBindingBehavior = (_dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["d" /* mixin */])(modeBindingBehavior), _dec2(_class2 = function OneWayBindingBehavior() {
   
 
-  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneWay;
+  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].oneWay;
 }) || _class2);
 
 var TwoWayBindingBehavior = (_dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["d" /* mixin */])(modeBindingBehavior), _dec3(_class3 = function TwoWayBindingBehavior() {
   
 
-  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].twoWay;
+  this.mode = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].twoWay;
 }) || _class3);
 
 /***/ }),
@@ -23908,7 +23908,7 @@ function _initializerWarningHelper(descriptor, context) {
 
 
 
-var Compose = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["g" /* customElement */])('compose'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* CompositionEngine */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["a" /* ViewResources */], __WEBPACK_IMPORTED_MODULE_1_aurelia_task_queue__["a" /* TaskQueue */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["i" /* noView */])(_class = _dec2(_class = (_class2 = function () {
+var Compose = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["i" /* customElement */])('compose'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["k" /* CompositionEngine */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["a" /* ViewResources */], __WEBPACK_IMPORTED_MODULE_1_aurelia_task_queue__["a" /* TaskQueue */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["l" /* noView */])(_class = _dec2(_class = (_class2 = function () {
   function Compose(element, container, compositionEngine, viewSlot, viewResources, taskQueue) {
     
 
@@ -24015,16 +24015,16 @@ var Compose = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_
   };
 
   return Compose;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'model', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'model', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'view', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'view', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'viewModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'viewModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
 })), _class2)) || _class) || _class) || _class);
@@ -24090,7 +24090,7 @@ var DebounceBindingBehavior = function () {
     var methodToDebounce = 'updateTarget';
     if (binding.callSource) {
       methodToDebounce = 'callSource';
-    } else if (binding.updateSource && binding.mode === __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].twoWay) {
+    } else if (binding.updateSource && binding.mode === __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].twoWay) {
       methodToDebounce = 'updateSource';
     }
 
@@ -24139,7 +24139,7 @@ var _dec, _dec2, _class;
 
 
 
-var Focus = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["k" /* customAttribute */])('focus', __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* bindingMode */].twoWay), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_4_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__["a" /* TaskQueue */]), _dec(_class = _dec2(_class = function () {
+var Focus = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["g" /* customAttribute */])('focus', __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["e" /* bindingMode */].twoWay), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_4_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__["a" /* TaskQueue */]), _dec(_class = _dec2(_class = function () {
   function Focus(element, taskQueue) {
     var _this = this;
 
@@ -24222,7 +24222,7 @@ var _dec, _dec2, _class;
 
 
 
-var Hide = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["k" /* customAttribute */])('hide'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["o" /* Animator */], __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["d" /* Optional */].of(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].boundary, true)), _dec(_class = _dec2(_class = function () {
+var Hide = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customAttribute */])('hide'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["t" /* Animator */], __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["d" /* Optional */].of(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].boundary, true)), _dec(_class = _dec2(_class = function () {
   function Hide(element, animator, domBoundary) {
     
 
@@ -24267,7 +24267,7 @@ var _dec, _dec2, _class;
 
 
 
-var If = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["k" /* customAttribute */])('if'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["l" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["m" /* templateController */])(_class = _dec2(_class = function () {
+var If = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["g" /* customAttribute */])('if'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["r" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["s" /* templateController */])(_class = _dec2(_class = function () {
   function If(viewFactory, viewSlot) {
     
 
@@ -24445,7 +24445,7 @@ function _initializerWarningHelper(descriptor, context) {
 
 
 
-var Repeat = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["k" /* customAttribute */])('repeat'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["l" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["n" /* TargetInstruction */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["a" /* ViewResources */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["g" /* ObserverLocator */], __WEBPACK_IMPORTED_MODULE_3__repeat_strategy_locator__["a" /* RepeatStrategyLocator */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* templateController */])(_class = _dec2(_class = (_class2 = function (_AbstractRepeater) {
+var Repeat = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["g" /* customAttribute */])('repeat'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["r" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["u" /* TargetInstruction */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["a" /* ViewResources */], __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["f" /* ObserverLocator */], __WEBPACK_IMPORTED_MODULE_3__repeat_strategy_locator__["a" /* RepeatStrategyLocator */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* templateController */])(_class = _dec2(_class = (_class2 = function (_AbstractRepeater) {
   _inherits(Repeat, _AbstractRepeater);
 
   function Repeat(viewFactory, instruction, viewSlot, viewResources, observerLocator, strategyLocator) {
@@ -24667,16 +24667,16 @@ var Repeat = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_t
   };
 
   return Repeat;
-}(__WEBPACK_IMPORTED_MODULE_6__abstract_repeater__["a" /* AbstractRepeater */]), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'items', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}(__WEBPACK_IMPORTED_MODULE_6__abstract_repeater__["a" /* AbstractRepeater */]), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'items', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'local', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'local', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'key', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'key', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'value', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'value', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
 })), _class2)) || _class) || _class) || _class);
@@ -24698,7 +24698,7 @@ var _dec, _dec2, _class;
 
 
 
-var Replaceable = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["k" /* customAttribute */])('replaceable'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["l" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["m" /* templateController */])(_class = _dec2(_class = function () {
+var Replaceable = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customAttribute */])('replaceable'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["r" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["s" /* templateController */])(_class = _dec2(_class = function () {
   function Replaceable(viewFactory, viewSlot) {
     
 
@@ -24742,7 +24742,7 @@ var _dec, _dec2, _class;
 
 
 
-var SanitizeHTMLValueConverter = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["m" /* valueConverter */])('sanitizeHTML'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2__html_sanitizer__["a" /* HTMLSanitizer */]), _dec(_class = _dec2(_class = function () {
+var SanitizeHTMLValueConverter = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* valueConverter */])('sanitizeHTML'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2__html_sanitizer__["a" /* HTMLSanitizer */]), _dec(_class = _dec2(_class = function () {
   function SanitizeHTMLValueConverter(sanitizer) {
     
 
@@ -24820,7 +24820,7 @@ var _dec, _dec2, _class;
 
 
 
-var Show = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["k" /* customAttribute */])('show'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["o" /* Animator */], __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["d" /* Optional */].of(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].boundary, true)), _dec(_class = _dec2(_class = function () {
+var Show = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customAttribute */])('show'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["t" /* Animator */], __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["d" /* Optional */].of(__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].boundary, true)), _dec(_class = _dec2(_class = function () {
   function Show(element, animator, domBoundary) {
     
 
@@ -24961,7 +24961,7 @@ var ThrottleBindingBehavior = function () {
     var methodToThrottle = 'updateTarget';
     if (binding.callSource) {
       methodToThrottle = 'callSource';
-    } else if (binding.updateSource && binding.mode === __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].twoWay) {
+    } else if (binding.updateSource && binding.mode === __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].twoWay) {
       methodToThrottle = 'updateSource';
     }
 
@@ -25021,7 +25021,7 @@ var UpdateTriggerBindingBehavior = (_temp = _class = function () {
     if (events.length === 0) {
       throw new Error(eventNamesRequired);
     }
-    if (binding.mode !== __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].twoWay) {
+    if (binding.mode !== __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["e" /* bindingMode */].twoWay) {
       throw new Error(notApplicableMessage);
     }
 
@@ -25043,7 +25043,7 @@ var UpdateTriggerBindingBehavior = (_temp = _class = function () {
   };
 
   return UpdateTriggerBindingBehavior;
-}(), _class.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["h" /* EventManager */]], _temp);
+}(), _class.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["g" /* EventManager */]], _temp);
 
 /***/ }),
 
@@ -25064,7 +25064,7 @@ var _dec, _dec2, _class;
 
 
 
-var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["k" /* customAttribute */])('with'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["l" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["m" /* templateController */])(_class = _dec2(_class = function () {
+var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customAttribute */])('with'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["r" /* BoundViewFactory */], __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["e" /* ViewSlot */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["s" /* templateController */])(_class = _dec2(_class = function () {
   function With(viewFactory, viewSlot) {
     
 
@@ -25080,7 +25080,7 @@ var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_tem
   };
 
   With.prototype.valueChanged = function valueChanged(newValue) {
-    var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_binding__["b" /* createOverrideContext */])(newValue, this.parentOverrideContext);
+    var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_binding__["a" /* createOverrideContext */])(newValue, this.parentOverrideContext);
     if (!this.view) {
       this.view = this.viewFactory.create();
       this.view.bind(newValue, overrideContext);
@@ -25155,7 +25155,7 @@ var _dec, _dec2, _dec3, _dec4, _dec5, _class;
 
 var logger = __WEBPACK_IMPORTED_MODULE_4_aurelia_logging__["getLogger"]('route-href');
 
-var RouteHref = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["k" /* customAttribute */])('route-href'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["j" /* bindable */])({ name: 'route', changeHandler: 'processChange' }), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["j" /* bindable */])({ name: 'params', changeHandler: 'processChange' }), _dec4 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["j" /* bindable */])({ name: 'attribute', defaultValue: 'href' }), _dec5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = _dec5(_class = function () {
+var RouteHref = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["g" /* customAttribute */])('route-href'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["h" /* bindable */])({ name: 'route', changeHandler: 'processChange' }), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["h" /* bindable */])({ name: 'params', changeHandler: 'processChange' }), _dec4 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["h" /* bindable */])({ name: 'attribute', defaultValue: 'href' }), _dec5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = _dec5(_class = function () {
   function RouteHref(router, element) {
     
 
@@ -25274,7 +25274,7 @@ function _initializerWarningHelper(descriptor, context) {
 
 
 
-var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["g" /* customElement */])('router-view'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_5_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_3_aurelia_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["r" /* ViewLocator */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["d" /* CompositionTransaction */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* CompositionEngine */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["i" /* noView */])(_class = _dec2(_class = (_class2 = function () {
+var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["i" /* customElement */])('router-view'), _dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_5_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["e" /* ViewSlot */], __WEBPACK_IMPORTED_MODULE_3_aurelia_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* ViewLocator */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["d" /* CompositionTransaction */], __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["k" /* CompositionEngine */]), _dec(_class = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["l" /* noView */])(_class = _dec2(_class = (_class2 = function () {
   function RouterView(element, container, viewSlot, router, viewLocator, compositionTransaction, compositionEngine) {
     
 
@@ -25346,7 +25346,7 @@ var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurel
         viewPortInstruction.layoutInstruction = layoutInstruction;
       }
 
-      viewPortInstruction.controller = metadata.create(childContainer, __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["s" /* BehaviorInstruction */].dynamic(_this.element, viewModel, viewFactory));
+      viewPortInstruction.controller = metadata.create(childContainer, __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["m" /* BehaviorInstruction */].dynamic(_this.element, viewModel, viewFactory));
 
       if (waitToSwap) {
         return;
@@ -25363,7 +25363,7 @@ var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurel
     var previousView = this.view;
 
     var work = function work() {
-      var swapStrategy = __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["t" /* SwapStrategies */][_this2.swapOrder] || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["t" /* SwapStrategies */].after;
+      var swapStrategy = __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["n" /* SwapStrategies */][_this2.swapOrder] || __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["n" /* SwapStrategies */].after;
       var viewSlot = _this2.viewSlot;
 
       swapStrategy(viewSlot, previousView, function () {
@@ -25391,8 +25391,8 @@ var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurel
       }
 
       return this.compositionEngine.createController(layoutInstruction).then(function (controller) {
-        __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["u" /* ShadowDOM */].distributeView(viewPortInstruction.controller.view, controller.slots || controller.view.slots);
-        controller.automate(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["b" /* createOverrideContext */])(layoutInstruction.viewModel), _this2.owningView);
+        __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["o" /* ShadowDOM */].distributeView(viewPortInstruction.controller.view, controller.slots || controller.view.slots);
+        controller.automate(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["a" /* createOverrideContext */])(layoutInstruction.viewModel), _this2.owningView);
         controller.view.children.push(viewPortInstruction.controller.view);
         return controller.view || controller;
       }).then(function (newView) {
@@ -25414,16 +25414,16 @@ var RouterView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurel
   };
 
   return RouterView;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'swapOrder', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'layoutView', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'layoutView', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'layoutViewModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, 'layoutViewModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
-}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'layoutModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */]], {
+}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, 'layoutModel', [__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["h" /* bindable */]], {
   enumerable: true,
   initializer: null
 })), _class2)) || _class) || _class) || _class);
@@ -25457,12 +25457,12 @@ var RouterViewLocator = function () {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap__);
 
